@@ -1,1 +1,1 @@
-CVE Pending
+Security Research & Findings [Update Pending]
