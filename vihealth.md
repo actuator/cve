@@ -21,8 +21,7 @@ See https://cwe.mitre.org/data/definitions/926.html
 
 This issue can be mitigated by changing exported status of the activity reflected on the AndroidManifest.xml entry:
 
-![image](https://github.com/actuator/cve/assets/78701239/6d9c2530-0122-4ea6-871a-72fd6c1ad08b)
-
+![image](https://github.com/actuator/cve/assets/78701239/84dae93b-0abe-469f-b936-f2d2cca61e9d)
 
 
 An attacker could craft a 3rd party app using the following code to load the URL of their choice to facilitate malicious actions:
@@ -44,6 +43,10 @@ startActivity(launch);
 
 
 
+![com viatom baselib mvvm web WebViewActivity](https://github.com/actuator/cve/assets/78701239/b4fe4884-58d3-4799-b2ab-26db8744309c)
+
+
+![image](https://github.com/actuator/cve/assets/78701239/e37edb0d-94f4-487d-b547-f2ba4d6037ea)
 
 **This issue has been fixed today (6/19/23) with version (2.74.62)-shortly after I reported it to the vendor on 6/10/23.
 
