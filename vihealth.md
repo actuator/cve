@@ -42,4 +42,4 @@ startActivity(launch);
 
 
 
-**This issue has been fixed today (6/19/23) with the app ViHealth (V. 2.74.62)-shortly after I reported it to the vendor on 6/10/23.
+**This issue has been fixed today (6/19/23) with version (2.74.62)-shortly after I reported it to the vendor on 6/10/23.
