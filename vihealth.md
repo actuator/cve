@@ -21,9 +21,7 @@ This issue can be mitigated by changing exported status of the activity reflecte
 
 
 
-
 An attacker could craft a 3rd party app using the following code to load the URL of their choice to facilitate malicious actions:
-
 
 
 
@@ -33,7 +31,7 @@ Intent launch = new Intent();
 launch.setClassName("com.viatom.vihealth", "com.viatom.baselib.mvvm.web.WebViewActivity");
 
 // Put the URL to be loaded in the WebViewActivity
-launch.putExtra("web_url", "https://www.fast.com");
+launch.putExtra("web_url", "https://www.windows93.net");
 
 // Start the activity
 startActivity(launch);
