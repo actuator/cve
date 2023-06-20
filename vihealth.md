@@ -1,17 +1,21 @@
 
 
-Vendor of Product: Viatom Health                                                                                                                                                                                                                                                                                                                                                                      
+Vendor of Product: Viatom Health     
+
 Vulnerability Type: CWE-926: Improper Export of Android Application Components
 
-Affected Product:  ViHealth Android App V. 2.74.58* & earlier
+
+Affected Product: ViHealth for Android v.2.74.58* & earlier (com.viatom.vihealth)
 
 Affected Component: Exported Activity "com.viatom.baselib.mvvm.web.WebViewActivity"
 
 Attack Type: Adjacent
 
-To exploit the vulnerability, the attacker needs to have a victim install a 3rd party Android app on their device
+The Android application contains an exported component that allows access by other applications without proper access control restrictions. 
 
-The Android application exports a component for use by other applications but does not properly restrict which applications can launch the component or access the data it contains.
+This vulnerability could allow a 3rd party application installed on the device to launch the exported activity and access the data it contains.
+
+A malicious app can load the URL of their choice & execute JavaScript within the context of the application to facilitate malicious actions.
 
 See https://cwe.mitre.org/data/definitions/926.html
 
