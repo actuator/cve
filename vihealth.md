@@ -24,7 +24,8 @@ This issue can be mitigated by changing exported status of the activity reflecte
 
 An attacker could craft a 3rd party app using the following code to load the url of their choice within the context of the exported activity of your application to facilitate malicious actions:
 
-![com viatom baselib mvvm web WebViewActivity](https://github.com/actuator/cve/assets/78701239/a190d272-a41d-4a01-8d7b-c2b64587b6b4)
+
+![com viatom baselib mvvm web WebViewActivity](https://github.com/actuator/cve/assets/78701239/2dafcbb9-e528-4103-881e-173655970e37)
 
 
 ********************************************************************************************************************************
