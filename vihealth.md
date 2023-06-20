@@ -48,7 +48,6 @@ startActivity(launch);
 **This issue has been fixed today (6/19/23) with version (2.74.62)-shortly after I reported it to the vendor on 6/10/23.
 
 
-![image](https://github.com/actuator/cve/assets/78701239/00fe68ca-6030-4eac-a84b-188c0036b5d8)
 
 
 ![image](https://github.com/actuator/cve/assets/78701239/4c2b98e8-2407-4325-bc96-8de0dae71443)
