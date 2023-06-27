@@ -1,0 +1,31 @@
+Disclaimer:
+The information provided in this document is for educational and informational purposes only & was initially reported to the vendor on 1/20/23
+
+Product Name 'Armfit Relax' Blood Pressure Monitor 
+
+CWE-319: Missing Encryption of Transmitted Sensitive Data
+
+Affected Component(s):
+Model: BP2A Firmware: 1.1.3.0 (FCC ID:2ADXK-8621) & 'ViHealth' Version: 2.74.45
+
+Vendor/Project:
+Wellue / Viatom
+
+Vulnerability Description:
+
+A vulnerability has been discovered in the Bluetooth-enabled Blood Pressure Monitor that allows for the unencrypted transmission of
+personally identifiable information (PII) medical information including Systolic & Diastolic Readings, Pulse Rate, Mean Arterial Pressure & Pulse Pressure between the device (Blood Pressure Monitor) & the corresponding mobile device running the application 'ViHealth' Version: 2.74.45.
+
+Exploit:
+This vulnerability exposes sensitive data to unauthorized parties within the device's Bluetooth signal range by sniffing unencrypted Bluetooth traffic
+
+Impact:
+This could allow attackers to misuse this information for illicit activities such as tracking a victim or potentially tampering with the communications of the medical device-alongside illicit data aggregation.
+
+Discovery:
+The device was purchased & analyzed for associated captured packet data between the device & the corresponding mobile application.
+
+Acknowledgments:
+Edward Warren
+
+
