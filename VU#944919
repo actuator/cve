@@ -13,8 +13,8 @@ Wellue / Viatom
 
 Vulnerability Description:
 
-A vulnerability has been discovered in the Bluetooth-enabled Blood Pressure Monitor that enables the unauthenticated capture of unencrypted transmission of
-personally identifiable information (PII) medical information including Systolic & Diastolic Readings, Pulse Rate, Mean Arterial Pressure & Pulse Pressure between the device (Blood Pressure Monitor) & the corresponding mobile device running the application 'ViHealth' Version: 2.74.45.
+A vulnerability has been discovered in the Bluetooth-enabled Blood Pressure Monitor that enables the unauthenticated capture of unencrypted data including:
+personally identifiable information (PII) medical information such as Systolic & Diastolic Readings, Pulse Rate, Mean Arterial Pressure & Pulse Pressure between the device (Blood Pressure Monitor) & the corresponding mobile device running the application 'ViHealth' Version: 2.74.45.
 
 Exploit:
 This vulnerability exposes sensitive data to unauthorized parties within the device's Bluetooth signal range by sniffing unencrypted Bluetooth traffic
