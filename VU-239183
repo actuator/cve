@@ -1,0 +1,32 @@
+Disclaimer:
+
+The information provided in this document is for educational purposes only & was initially reported to the vendor who did not respond coordinated disclosure requests.
+
+Product Name: Slimpal WiFi Bluetooth Smart Body Scale
+ 
+CWE-319: Missing Encryption of Transmitted Sensitive Data
+
+Affected Component(s): 
+
+Model: CS20S | (FCC ID: 2ANDX-CS20S) & Android App: 'Slimpal' Version: 2.9.0.
+
+Vendor/Project:
+Slimpal
+
+Vulnerability Description:
+
+A vulnerability has been discovered in the Bluetooth-enabled Smart Scale that allows for the unencrypted transmission of personally identifiable information (PII) including Age, Date of Birth, Gender, Weight & Height between the device (Smart Scale) & the corresponding mobile device running the Android application 'Slimpal' Version: 2.9.0.
+
+Exploit:
+This vulnerability exposes sensitive data to unauthorized parties within the device's Bluetooth signal range by sniffing unencrypted BLE traffic.
+
+Impact:
+This could allow attackers to misuse this information for illicit activities such as tracking a victim or potentially tampering with the communications of the impacted medical device.
+
+Discovery:
+
+The device was purchased & subsequently analyzed for associated BLE captured packet data between the device & mobile application.
+
+Acknowledgments:
+Edward Warren
+
