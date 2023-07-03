@@ -15,7 +15,7 @@ The Android application contains an exported component that allows access by oth
 
 This vulnerability could allow a 3rd party application installed on the device to launch the exported activity and access the data it contains.
 
-A malicious app can load the URL of their choice & execute JavaScript within the context of the application to facilitate malicious actions.
+A malicious app can load the URL of their choice to facilitate malicious actions.
 
 See https://cwe.mitre.org/data/definitions/926.html
 
