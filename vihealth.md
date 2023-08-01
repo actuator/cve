@@ -1,8 +1,6 @@
-** RESERVED ** An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
----------------------------------------------------------------------------------
+CVE-2023-36351 ** RESERVED ** An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
-
-
+~
 
 Vendor of Product: Viatom Health     
 
@@ -61,3 +59,5 @@ startActivity(launch);
 
 
 Discoverer: Edward Warren
+
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-36351
