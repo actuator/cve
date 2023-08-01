@@ -1,6 +1,8 @@
 ** RESERVED ** An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
 
+
+
 Vendor of Product: Viatom Health     
 
 Vulnerability Type: CWE-926: Improper Export of Android Application Components
