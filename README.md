@@ -8,7 +8,7 @@ CVE-2023-36351
 </code>
 
 CVE-2023-40038
-<code>Arris DG860A and DG1670A devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. (They use the first 6 characters of the SSID and the last 6 characters of the BSSID, decrementing the last digit.)</code>
+<code>Arris DG860A and DG1670A devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. </code>
 
 CVE-2023-40039
 <code>An issue was discovered on TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. </code>
