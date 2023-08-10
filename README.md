@@ -15,5 +15,3 @@ CVE-2023-40038
 CVE-2023-40039
 <code>An issue was discovered on TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. </code>
 
-CVE-2023-40040
-<code> An issue was discovered in the MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android. A remote attacker **can access the camera feed** via the com.cordovaplugincamerapreview.CameraActivity component in some situations. NOTE: This is only exploitable on Android versions that lack runtime permission checks, and of those only Android SDK 5.1.1 API 22 is consistent with the manifest. Thus, this applies to Android Lollipop and possibly earlier, affecting less than five percent of Android devices as of 2023.</code>
