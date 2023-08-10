@@ -1,6 +1,4 @@
 
-
-
 CVE-2023-34761
 <code>An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.
 </code>
