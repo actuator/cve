@@ -25,10 +25,10 @@ CVE-2023-42469
  component.</code>
 
 CVE-2023-42470
-<code>The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows Remote Code Execution via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.</code>
+<code>The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows **Remote Code Execution** via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.</code>
 
 
 CVE-2023-42471
-<code>The wave.ai.browser application through 1.0.35 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent.
+<code>The wave.ai.browser application through 1.0.35 for Android allows a **remote** attacker to **execute arbitrary** JavaScript **code** via a crafted intent.
 It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity.
 This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third party application (with no permissions).</code>
