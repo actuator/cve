@@ -11,3 +11,11 @@ CVE-2023-40039
 <code>An issue was discovered on TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. </code>
 
 CVE-2023-40040
+
+CVE-2023-42468
+
+CVE-2023-42469
+
+CVE-2023-42470
+
+CVE-2023-42471
