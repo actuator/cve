@@ -18,13 +18,13 @@ CVE-2023-40040
 
 
 CVE-2023-42468
-<code>The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component.
+<code>The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a **remote attacker to initiate phone calls without user consent**, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component.
 A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.</code>
 
 CVE-2023-42469
 <code>The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android
  enables any installed application (with no permissions) to place
- phone calls without user interaction by sending a crafted intent via the
+ **phone calls without user interaction** by sending a crafted intent via the
  com.full.dialer.top.secure.encrypted.activities.DialerActivity
  component.</code>
 
