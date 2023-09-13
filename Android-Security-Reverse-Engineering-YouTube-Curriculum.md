@@ -24,7 +24,7 @@ Maddie Stone
 ## Shmoocon 2020 - Lightning Talks Using Android WebViews to Steal All the Files
 https://www.youtube.com/watch?v=NCEQ0QIyicE
 
-Jesson Soto Ventura 
+Jesson Soto Ventura Laurie Kirk
 
 ## TROOPERS23: Beyond Java: Obfuscating Android Apps with Purely Native Code
 https://www.youtube.com/watch?v=wayMcQQZV1U
