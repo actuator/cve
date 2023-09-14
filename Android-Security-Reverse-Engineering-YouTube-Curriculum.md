@@ -1,7 +1,7 @@
 ````
-Android Reverse Engineering YouTube Curriculum
+Android Security & Reverse Engineering YouTube Curriculum
 ````
-## Black Hat Asia 2023 Dirty Stream Attack, Turning Android Share Targets Into Attack Vectors
+## Black Hat Asia 2023 - Dirty Stream Attack, Turning Android Share Targets Into Attack Vectors
 https://www.youtube.com/watch?v=oZTGR9vJVMQ
 
 Dimitrios Valsamaras
@@ -24,11 +24,16 @@ Maddie Stone
 ## Shmoocon 2020 - Lightning Talks Using Android WebViews to Steal All the Files
 https://www.youtube.com/watch?v=NCEQ0QIyicE
 
-Jesson Soto Ventura Laurie Kirk
+Jesson Soto Ventura 
 
 ## TROOPERS23: Beyond Java: Obfuscating Android Apps with Purely Native Code
 https://www.youtube.com/watch?v=wayMcQQZV1U
 
 Laurie Kirk
+
+## Black Hat USA 2020 - TiYunZong Exploit Chain to Remotely Root Modern Android Devices - Pwn Android Phones from 2015-2020
+https://www.youtube.com/watch?v=K91SrkKt4IQ
+
+By Guang Gong 
 
 --
