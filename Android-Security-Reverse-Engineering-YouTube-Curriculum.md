@@ -23,6 +23,7 @@ Maddie Stone
 
 ## Shmoocon 2020 - Lightning Talks Using Android WebViews to Steal All the Files
 https://www.youtube.com/watch?v=NCEQ0QIyicE
+
 https://nvd.nist.gov/vuln/detail/CVE-2019-12368
 
 Jesson Soto Ventura 
