@@ -36,4 +36,7 @@ https://www.youtube.com/watch?v=K91SrkKt4IQ
 
 By Guang Gong 
 
---
+## Black Hat Europe 2019 - Simple Spyware: Androids Invisible Foreground Services and How to (Ab)use Them
+https://youtu.be/EuInUW77CPo?feature=shared
+
+Thomas Sutter and Bernhard Tellenbach 
