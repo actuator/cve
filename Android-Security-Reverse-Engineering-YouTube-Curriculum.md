@@ -15,3 +15,4 @@
 ## **Android Reverse Engineering & Obfuscation**
 * **Securing the System: A Deep Dive into Reversing Android Pre-Installed Apps** - [Black Hat USA 2019](https://www.youtube.com/watch?v=U6qTcpCfuFc) by Maddie Stone
 * **Beyond Java: Obfuscating Android Apps with Purely Native Code** - [TROOPERS23](https://www.youtube.com/watch?v=wayMcQQZV1U) by Laurie Kirk
+* **Runtime Riddles - Abusing Manipulation Points in the Android Source** - [DEF CON 31](https://www.youtube.com/watch?v=Bq7Z3X4xwCE) by Laurie Kirk
