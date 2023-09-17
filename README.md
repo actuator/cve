@@ -1,38 +1,54 @@
 
-CVE-2023-34761
-<code>An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.</code>
+---
 
-CVE-2023-36351
-<code>An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to **execute arbitrary code** via the com.viatom.baselib.mvvm.webWebViewActivity component.
-</code>
+**CVE-2023-34761**
+- **Affected**: Hello Cup 1.3.1 for Android
+- **Description**: An unauthenticated attacker within BLE proximity can remotely connect to the 7-Eleven LED Message Cup and bypass the application's chat censor filter.
 
-CVE-2023-40038
+---
 
+**CVE-2023-36351**
+- **Affected**: ViHealth for Android v.2.74.58 and earlier
+- **Description**: Allows remote code execution via the `com.viatom.baselib.mvvm.webWebViewActivity` component.
 
-CVE-2023-40039
-<code>An issue was discovered on TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. </code>
+---
 
-CVE-2023-40040
-<code>An issue was discovered in the MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android. A remote attacker can start the camera feed via the com.cordovaplugincamerapreview.CameraActivity component in some situations.
-</code>
+ CVE-2023-40038
+ 
+---
 
+**CVE-2023-40039**
+- **Affected**: TG852G, TG862G, TG1672G devices
+- **Description**: A remote attacker can derive the default WPA2-PSK value by observing a beacon frame.
 
-CVE-2023-42468
-<code>The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a **remote attacker to initiate phone calls without user consent**, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component.
-A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.</code>
+---
 
-CVE-2023-42469
-<code>The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android
- enables any installed application (with no permissions) to place
- **phone calls without user interaction** by sending a crafted intent via the
- com.full.dialer.top.secure.encrypted.activities.DialerActivity
- component.</code>
+**CVE-2023-40040**
+- **Affected**: MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android
+- **Description**: A remote attacker can activate the camera feed via the `com.cordovaplugincamerapreview.CameraActivity` component under certain conditions.
 
-CVE-2023-42470
-<code>The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows **Remote Code Execution** via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.</code>
+---
 
+**CVE-2023-42468**
+- **Affected**: com.cutestudio.colordialer application (up to version 2.1.8-2) for Android
+- **Description**: Remote attacker can initiate phone calls without user consent due to exposure of the `com.cutestudio.dialer.activities.DialerActivity` component.
 
-CVE-2023-42471
-<code>The wave.ai.browser application through 1.0.35 for Android allows a **remote** attacker to **execute arbitrary** JavaScript **code** via a crafted intent.
-It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity.
-This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third party application (with no permissions).</code>
+---
+
+**CVE-2023-42469**
+- **Affected**: com.full.dialer.top.secure.encrypted application (up to version 1.0.1) for Android
+- **Description**: Allows unauthorized phone calls by sending a crafted intent via the `com.full.dialer.top.secure.encrypted.activities.DialerActivity` component.
+
+---
+
+**CVE-2023-42470**
+- **Affected**: Imou Life com.mm.android.smartlifeiot application (up to version 6.8.0) for Android
+- **Description**: Allows remote code execution via a crafted intent with JavaScript execution enabled in the WebView related to `com.mm.android.easy4ip.MainActivity`.
+
+---
+
+**CVE-2023-42471**
+- **Affected**: wave.ai.browser application (up to version 1.0.35) for Android
+- **Description**: Remote attacker can execute arbitrary JavaScript via a crafted intent. The issue lies in the `wave.ai.browser.ui.splash.SplashScreen` activity's WebView component without proper input validation.
+
+---
