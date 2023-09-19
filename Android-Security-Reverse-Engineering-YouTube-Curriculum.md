@@ -1,4 +1,4 @@
-# Android Security & Reverse Engineering YouTube Curriculum
+# Android Security & Reverse Engineerin ing YouTube Curriculum
 
 ## Android Exploits & Attacks
 * [**Dirty Stream Attack, Turning Android Share Targets Into Attack Vectors**](https://www.youtube.com/watch?v=oZTGR9vJVMQ) 
@@ -13,7 +13,7 @@
   - Black Hat USA 2022 by Jon Bottarini, Xingyu Jin, Richard Neal
 * [**Elevating The TrustZone To Achieve A Powerful Android Kernel Exploit**](https://www.youtube.com/watch?v=WXqff23dT5I) 
   - Nullcon Goa 2022 by Tamir Zahavi
-  - Related: [CVE-2019-12368](https://nvd.nist.gov/vuln/detail/CVE-2021-1961)
+  
 
 ## Android Permissions & Privileges
 * [**Bypassing Android Permissions From All Protection Levels**](https://www.youtube.com/watch?v=pP5tKT9-I0Y) 
@@ -24,7 +24,7 @@
   - Black Hat Asia 2021 by Ce Qin
 * [**Using Android WebViews to Steal All the Files**](https://www.youtube.com/watch?v=NCEQ0QIyicE) 
   - Shmoocon 2020 by Jesson Soto Ventura 
-  - Related: [CVE-2019-12368](https://nvd.nist.gov/vuln/detail/CVE-2019-12368)
+  
 
 ## Android Reverse Engineering & Obfuscation
 * [**Securing the System: A Deep Dive into Reversing Android Pre-Installed Apps**](https://www.youtube.com/watch?v=U6qTcpCfuFc) 
