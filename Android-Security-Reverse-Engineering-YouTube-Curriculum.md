@@ -15,7 +15,7 @@
   - Nullcon Goa 2022 by Tamir Zahavi
 * [**Monitoring Surveillance Vendors: A Deep Dive into In-the-Wild Android Full Chains in 2021**](https://youtu.be/0Vv5kLj0tz4?feature=shared)
   - Black Hat USA 2022 by Xingyu Jin, Richard Neal, Christian Resell, Clement Lecigne
-* [**Revisiting Stealthy Sensitive Information Collection from Android Apps**](Link-to-Black-Hat-Asia-2023-Presentation)
+* [**Revisiting Stealthy Sensitive Information Collection from Android Apps**](https://www.youtube.com/watch?v=NGhamH4_CZY)
   - Black Hat Asia 2023 by Guangdong Bai, Guangshuai Xia, Qing Zhang
 
 ## Android Permissions & Privileges
