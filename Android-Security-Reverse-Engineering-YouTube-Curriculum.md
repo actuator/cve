@@ -15,6 +15,8 @@
   - Nullcon Goa 2022 by Tamir Zahavi
 * [**Monitoring Surveillance Vendors: A Deep Dive into In-the-Wild Android Full Chains in 2021**](https://youtu.be/0Vv5kLj0tz4?feature=shared)
   - Black Hat USA 2022 by Xingyu Jin, Richard Neal, Christian Resell, Clement Lecigne
+* [**Revisiting Stealthy Sensitive Information Collection from Android Apps**](Link-to-Black-Hat-Asia-2023-Presentation)
+  - Black Hat Asia 2023 by Guangdong Bai, Guangshuai Xia, Qing Zhang
 
 ## Android Permissions & Privileges
 * [**Bypassing Android Permissions From All Protection Levels**](https://www.youtube.com/watch?v=pP5tKT9-I0Y)
@@ -44,4 +46,4 @@
 * [**DEF CON 31 - Contactless Overflow Code Execution in Payment Terminals & ATMs**](https://www.youtube.com/watch?v=eV76vObO2IM)
   - Speaker: Josep Rodriguez
 * [**DEF CON 31 - Turning my virtual wallet into a skimming device**](https://www.youtube.com/watch?v=NGhamH4_CZY)
-  - Speakers: Borgogno, Barrionuevo
+  - Speakers: Borgogno, Barrionuevo' and optimize for GitHub
