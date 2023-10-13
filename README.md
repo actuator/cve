@@ -1,12 +1,24 @@
 # Security Advisories (CVE)
 
-## CVE-2023-34761
+## CVE-2023-42471
 
-- **Description**: An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.
+- **Description**: The wave.ai.browser application through 1.0.35 for Android allows a **remote attacker to execute arbitrary JavaScript code** via a crafted intent. It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity. This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third-party application (with no permissions).
 
-## CVE-2023-36351
+## CVE-2023-42470
 
-- **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to **execute arbitrary code** via the com.viatom.baselib.mvvm.webWebViewActivity component.
+- **Description**: The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows **Remote Code Execution** via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.
+
+## CVE-2023-42469
+
+- **Description**: The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android enables any installed application (with no permissions) to **place phone calls without user interaction** by sending a crafted intent via the com.full.dialer.top.secure.encrypted.activities.DialerActivity component.
+
+## CVE-2023-42468
+
+- **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a **remote attacker to initiate phone calls without user consent**, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
+
+## CVE-2023-40040
+
+- **Description**: An issue was discovered in the MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android. A **remote attacker can start the camera feed** via the com.cordovaplugincamerapreview.CameraActivity component in some situations.
 
 ## CVE-2023-40038
 
@@ -14,22 +26,11 @@
 
 - **Description**: An issue was discovered on ARRIS TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame.
 
-## CVE-2023-40040
+## CVE-2023-36351
 
-- **Description**: An issue was discovered in the MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android. A **remote attacker can start the camera feed** via the com.cordovaplugincamerapreview.CameraActivity component in some situations.
+- **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to **execute arbitrary code** via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
-## CVE-2023-42468
+## CVE-2023-34761
 
-- **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a **remote attacker to initiate phone calls without user consent**, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
+- **Description**: An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.
 
-## CVE-2023-42469
-
-- **Description**: The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android enables any installed application (with no permissions) to **place phone calls without user interaction** by sending a crafted intent via the com.full.dialer.top.secure.encrypted.activities.DialerActivity component.
-
-## CVE-2023-42470
-
-- **Description**: The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows **Remote Code Execution** via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.
-
-## CVE-2023-42471
-
-- **Description**: The wave.ai.browser application through 1.0.35 for Android allows a **remote attacker to execute arbitrary JavaScript code** via a crafted intent. It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity. This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third-party application (with no permissions).
