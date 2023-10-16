@@ -20,11 +20,13 @@
 
 - **Description**: An issue was discovered in the MyCrops HiGrade "THC Testing & Cannabi" application 1.0.337 for Android. A **remote attacker can start the camera feed** via the com.cordovaplugincamerapreview.CameraActivity component in some situations.
 
-## CVE-2023-40038
 
 ## CVE-2023-40039
 
 - **Description**: An issue was discovered on ARRIS TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame.
+
+## CVE-2023-40038
+
 
 ## CVE-2023-36351
 
