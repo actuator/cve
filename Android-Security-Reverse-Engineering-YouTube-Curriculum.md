@@ -22,6 +22,9 @@
   - *Black Hat Asia 2022* by Ryan Johnson, Mohamed Elsabagh, Angelos Stavrou
 - [**ExplosION: The Hidden Mines in the Android ION Driver**](https://youtu.be/Qh6THzT0fxk?feature=shared) 
   - *Black Hat Asia 2022* by Le Wu, Xuen Li, Tim Xia
+ 
+- [**(UN)protected Broadcasts in Android 9 & 10**](https://youtu.be/nDHPZH20rtE?feature=shared)
+  - *Black Hat Asia 2021* by Ryan Johnson
 
 ## Android Permissions & Privileges
 
