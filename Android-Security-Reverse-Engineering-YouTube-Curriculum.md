@@ -25,6 +25,9 @@
  
 - [**(UN)protected Broadcasts in Android 9 & 10**](https://youtu.be/nDHPZH20rtE?feature=shared)
   - *Black Hat Asia 2021* by Ryan Johnson
+  
+
+
 
 ## Android Permissions & Privileges
 
@@ -46,6 +49,10 @@
   - *TROOPERS23* by Laurie Kirk
 - [**Runtime Riddles: Manipulation Points in the Android Source**](https://www.youtube.com/watch?v=Bq7Z3X4xwCE) 
   - *DEF CON 31* by Laurie Kirk
+  
+- [**Unmasking the Godfather - Reverse Engineering the Latest Android Banking Trojan**](https://youtu.be/jNQmc2REwFg) 
+  - *Strange Loop Conference* by Laurie Kirk
+  
 
 ## Android Bluetooth Security
 
