@@ -1,4 +1,10 @@
 # Security Advisories (CVE)
+- TBA
+## CVE-2023-49000
+## CVE-2023-49001
+## CVE-2023-49002
+## CVE-2023-49003
+-
 
 ## CVE-2023-42471
 
