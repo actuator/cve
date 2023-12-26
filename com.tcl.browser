@@ -1,0 +1,61 @@
+The com.tcl.browser application through 6.65.022_dab24cc6_231221_gp for Android allows a
+> remote attacker to execute arbitrary JavaScript code via a crafted intent.
+> It contains a manifest entry that
+> exports the com.tcl.browser.portal.browse.activity.BrowsePageActivity activity.
+> This activity uses a WebView component to display web content and
+> doesn't adequately validate or sanitize the URI or any extra data
+> passed in the intent by a third party application (with no permissions).
+>
+> ------------------------------------------
+>
+>
+> [VulnerabilityType Other]
+> CWE-94: Improper Control of Generation of Code ('Code Injection'): The vulnerability can potentially allow attackers to inject arbitrary code.
+>
+> ------------------------------------------
+>
+> [Vendor of Product]
+> Shenzhen TCL New Technology Co., Limited
+>
+> ------------------------------------------
+>
+> [Affected Product Code Base]
+> 'Browser TV Web - BrowseHere'  - 'com.tcl.browser' through Ver. 6.65.022_dab24cc6_231221_gp for Android
+>
+> ------------------------------------------
+>
+> [Affected Component]
+> The `com.tcl.browser` application contains a manifest entry that exports the `com.tcl.browser.portal.browse.activity.BrowsePageActivity` activity. This exported activity permits unauthorized applications to start it with arbitrary intent data.
+> This can lead to an attacker to execute arbitrary JavsScript code within the context of the application without any permissions.
+>
+> ------------------------------------------
+>
+> [Attack Type]
+> Remote
+>
+> ------------------------------------------
+>
+> [Impact Code execution]
+> true
+>
+> ------------------------------------------
+>
+> [Impact Information Disclosure]
+> true
+>
+> ------------------------------------------
+>
+> [Attack Vectors]
+> This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent. Therefore a malicious 3rd party app could craft an intent to execute arbitrary JavaScript within that WebView without any permissions.
+>
+> ------------------------------------------
+>
+> [Reference]
+> https://github.com/actuator/com.tcl.browser/blob/main/CWE-94.md
+> https://github.com/actuator/com.tcl.browser
+>
+> ------------------------------------------
+
+>
+> [Discoverer]
+> Edward Warren
