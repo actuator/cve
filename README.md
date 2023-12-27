@@ -1,10 +1,21 @@
 # Security Advisories (CVE)
-- TBA
+
 ## CVE-2023-49000
+
+- **Description**: An issue in ArtistScope ArtisBrowser v.34.1.5 and before allows an attacker to bypass intended access restrictions
+via interaction with the com.artis.browser.IntentReceiverActivity component
+ 
 ## CVE-2023-49001
+
+- **Description**: An issue in Indi Browser (aka kvbrowser) v.12.11.23 allows an attacker to bypass intended access restrictions via interaction with the com.example.gurry.kvbrowswer.webview component.
+  
 ## CVE-2023-49002
+
+- **Description**: An issue in Xenom Technologies (sinous) Phone Dialer-voice Call Dialer v.1.2.5 allows an attacker to bypass intended access restrictions via interaction with com.funprime.calldialer.ui.activities.OutgoingActivity.
+
 ## CVE-2023-49003
--
+
+- **Description**: An issue in simplemobiletools Simple Dialer 5.18.1 allows an attacker to bypass intended access restrictions via interaction with com.simplemobiletools.dialer.activities.DialerActivity.
 
 ## CVE-2023-42471
 
