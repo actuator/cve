@@ -1,21 +1,40 @@
 # Security Advisories (CVE)
+
 TBA
 ```
+
 ## CVE-2023-46447
+
 ## CVE-2023-47352
+
 ## CVE-2023-47353
+
 ## CVE-2023-47354
+
 ## CVE-2023-47355
+
 ## CVE-2023-47889
-## CVE-2023-43955
-## CVE-2023-43481
-## CVE-2023-46918
-## CVE-2023-46919
-## CVE-2023-47882
-## CVE-2023-47883
+ 
 ```
 
+## CVE-2023-43481
+- **Description**: An issue in Shenzhen TCL Browser TV Web BrowseHere (aka com.tcl.browser) 6.65.022_dab24cc6_231221_gp allows a remote attacker to execute arbitrary JavaScript code via the com.tcl.browser.portal.browse.activity.BrowsePageActivity component.
 
+## CVE-2023-46918
+- **Description**: Phlox com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus has an Android manifest file that contains an entry with the android:allowBackup attribute set to true. This could be leveraged by an attacker with physical access to the device.
+
+## CVE-2023-46919
+- **Description**: Phlox com.phlox.simpleserver (aka Simple HTTP Server) 1.8 and com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus have a hardcoded aKySWb2jjrr4dzkYXczKRt7K encryption key. The threat is from a man-in-the-middle attacker who can intercept and potentially modify data during transmission.
+
+## CVE-2023-47882
+- **Description**: The Kami Vision YI IoT com.yunyi.smartcamera application through 4.1.9_20231127 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to the com.ants360.yicamera.activity.WebViewActivity component.
+
+## CVE-2023-47883
+- **Description**: The com.altamirano.fabricio.tvbrowser TV browser application through 4.5.1 for Android is vulnerable to JavaScript code execution via an explicit intent due to an exposed MainActivity.
+
+## CVE-2023-43955
+- **Description**: The com.phlox.tvwebbrowser TV Bro application through 2.0.0 for Android mishandles external intents through WebView. This allows attackers to execute arbitrary code, create arbitrary files. and perform arbitrary downloads via JavaScript that uses takeBlobDownloadData.
+  
 ## CVE-2023-49000
 
 - **Description**: An issue in ArtistScope ArtisBrowser v.34.1.5 and before allows an attacker to bypass intended access restrictions
