@@ -15,7 +15,7 @@ TBA
  
 ```
 ## CVE-2023-46447
-- **Description**: An issue in Pops Diabetes Pops Rebel Bluetooth Glucose Monitoring System v.5.0 allows a remote unauthenticated attacker to obtain sensitive information via unencrypted BLE data..
+- **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
 
 ## CVE-2023-43481
 - **Description**: An issue in Shenzhen TCL Browser TV Web BrowseHere (aka com.tcl.browser) 6.65.022_dab24cc6_231221_gp allows a remote attacker to execute arbitrary JavaScript code via the com.tcl.browser.portal.browse.activity.BrowsePageActivity component.
