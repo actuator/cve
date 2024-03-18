@@ -21,8 +21,7 @@ TBA
 - **Description**: UBEE DDW365 XCNDDW365 8.14.3105 software on hardware 3.13.1 allows a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via RgFirewallEL.asp, RgDdns.asp, RgTime.asp, RgDiagnostics.asp, or RgParentalBasic.asp parameters.
 
 ## CVE-2024-28089 
-- **Description**: An authenticated attacker with access to a LAN via WIFI can inject malicious scripts into the un-sanitized input field resulting in a DOM based stored (persistent) XSS vulnerability that can fetch remote resources , causes a denial-of-service attack or information disclosure.  The attacks can be triggered by visiting the "Device Location" page and persists even after a user logs in and out.
-
+- **Description**: Hitron CODA-4582 2AHKM-CODA4589 7.2.4.5.1b8 devices allow a remote attacker within Wi-Fi proximity (who has access to the router admin panel) to conduct a DOM-based stored XSS attack that can fetch remote resources. The payload is executed at index.html#advanced_location (aka the Device Location page). This can cause a denial of service or lead to information disclosure.
 
 ## CVE-2024-25731
 - **Description**: The Elink Smart eSmartCam (com.cn.dq.ipc) application 2.1.5 for Android contains hardcoded AES encryption keys that can be extracted from a binary file. Thus, encryption can be defeated by an attacker who can observe packet data (e.g., over Wi-Fi).
