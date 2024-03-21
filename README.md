@@ -2,7 +2,6 @@
 
 TBA
 ```
-
 ## CVE-2024-23729
 
 ## CVE-2024-23728
@@ -12,10 +11,10 @@ TBA
 ## CVE-2024-28090
 
 ## CVE-2024-28091
+```
 
 ## CVE-2024-28093
-
-```
+- **Description**:  The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
 
 ## CVE-2024-28092
 - **Description**: UBEE DDW365 XCNDDW365 8.14.3105 software on hardware 3.13.1 allows a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via RgFirewallEL.asp, RgDdns.asp, RgTime.asp, RgDiagnostics.asp, or RgParentalBasic.asp parameters.
