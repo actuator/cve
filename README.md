@@ -6,9 +6,6 @@ TBA
 
 ## CVE-2024-23728
 
-## CVE-2024-28090
-
-## CVE-2024-28091
 ```
 
 ## CVE-2024-28093
@@ -17,6 +14,12 @@ TBA
 ## CVE-2024-28092
 - **Description**: UBEE DDW365 XCNDDW365 8.14.3105 software on hardware 3.13.1 allows a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via RgFirewallEL.asp, RgDdns.asp, RgTime.asp, RgDiagnostics.asp, or RgParentalBasic.asp parameters.
 
+## CVE-2024-28091
+- **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User Defined Service in managed_services_add.asp (the victim must click an X for a deletion)
+
+## CVE-2024-28090
+- **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User name in dyn_dns.asp
+  
 ## CVE-2024-28089 
 - **Description**: Hitron CODA-4582 2AHKM-CODA4589 7.2.4.5.1b8 devices allow a remote attacker within Wi-Fi proximity (who has access to the router admin panel) to conduct a DOM-based stored XSS attack that can fetch remote resources. The payload is executed at index.html#advanced_location (aka the Device Location page). This can cause a denial of service or lead to information disclosure.
 
