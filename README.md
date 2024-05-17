@@ -14,8 +14,6 @@ TBA
 
 ## CVE-2024-31973
 
-## CVE-2024-31974
-
 ## CVE-2024-31975
 
 ## CVE-2024-31976
@@ -24,6 +22,9 @@ TBA
 
 
 ```
+## CVE-2024-31974
+- **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remoteattacker to execute arbitrary JavaScript code via a crafted intent.
+com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
 
 ## CVE-2024-28093
 - **Description**:  The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
