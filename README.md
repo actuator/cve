@@ -29,6 +29,8 @@ TBA
 ## CVE-2024-36063
 
 ## CVE-2024-36064
+
+## CVE-2024-36437
 ```
 ## CVE-2024-31974
 - **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remoteattacker to execute arbitrary JavaScript code via a crafted intent.
