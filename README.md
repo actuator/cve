@@ -6,10 +6,6 @@ TBA
 
 ## CVE-2024-23728
 
-## CVE-2024-31970
-
-## CVE-2024-31971
-
 ## CVE-2024-31972
 
 ## CVE-2024-31973
@@ -17,8 +13,6 @@ TBA
 ## CVE-2024-31975
 
 ## CVE-2024-31976
-
-## CVE-2024-31977
 
 ## CVE-2024-36060
 
@@ -37,11 +31,21 @@ TBA
 ## CVE-2024-37574
 
 ## CVE-2024-37575
+```
+
+## CVE-2024-31977
+- **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
+
+## CVE-2024-31971
+- **Description**: Multiple stored cross-site scripting (XSS) vulnerabilities on AdTran NetVanta 3120 18.01.01.00.E devices allow remote attackers to inject arbitrary JavaScript, as demonstrated by: /mainPassword.html, /processIdentity.html,/public.html, /dhcp.html, /private.html,/hostname.html, /connectivity.html, /NetworkMonitor.html, /trafficMonitoringConfig.html, & /wizardMain.html.
+
+## CVE-2024-31970
+- **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.1.1) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
 
 ## CVE-2024-39345
+- **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.1.1) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address.
+All of the devices internet interfaces share a similar MAC address that only varies in their final octet. This allows network-adjacent attackers to derive the support user's SSH password by decrementing the final octet of the connected gateway address or via the BSSID. An attacker can then execute arbitrary OS commands with root-level privileges.
 
-
-```
 ## CVE-2024-31974
 - **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remoteattacker to execute arbitrary JavaScript code via a crafted intent.
 com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
@@ -81,13 +85,6 @@ com.solarized.firedown.IntentActivity uses a WebView component to display web co
 
 ## CVE-2023-49002
 - **Description**: An issue in Xenom Technologies (sinous) Phone Dialer-voice Call Dialer v.1.2.5 allows an attacker to bypass intended access restrictions via interaction with com.funprime.calldialer.ui.activities.OutgoingActivity.
-
-## CVE-2023-49001
-- **Description**: An issue in Indi Browser (aka kvbrowser) v.12.11.23 allows an attacker to bypass intended access restrictions via interaction with the com.example.gurry.kvbrowswer.webview component.
-
-## CVE-2023-49000
-- **Description**: An issue in ArtistScope ArtisBrowser v.34.1.5 and before allows an attacker to bypass intended access restrictions
-via interaction with the com.artis.browser.IntentReceiverActivity component
 
 ## CVE-2023-47889
 - **Description**: The Android application BINHDRM26 com.bdrm.superreboot 1.0.3, exposes several critical actions through its exported broadcast receivers. These exposed actions can allow any app on the device to send unauthorized broadcasts, leading to unintended consequences. The vulnerability is particularly concerning because these actions include powering off, system reboot & entering recovery mode.
