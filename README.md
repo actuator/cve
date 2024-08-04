@@ -42,15 +42,15 @@ All of the devices internet interfaces share a similar MAC address that only var
 ## CVE-2024-31977
 - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
 
+## CVE-2024-31974
+- **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent.
+com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
+
 ## CVE-2024-31971
 - **Description**: Multiple stored cross-site scripting (XSS) vulnerabilities on AdTran NetVanta 3120 18.01.01.00.E devices allow remote attackers to inject arbitrary JavaScript, as demonstrated by: /mainPassword.html, /processIdentity.html,/public.html, /dhcp.html, /private.html,/hostname.html, /connectivity.html, /NetworkMonitor.html, /trafficMonitoringConfig.html, & /wizardMain.html.
 
 ## CVE-2024-31970
 - **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.1.1) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
-
-## CVE-2024-31974
-- **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent.
-com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
 
 ## CVE-2024-28093
 - **Description**:  The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
