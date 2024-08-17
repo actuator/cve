@@ -2,8 +2,6 @@
 
 TBA
 ```
-## CVE-2024-23729
-
 ## CVE-2024-23728
 
 ## CVE-2024-31972
@@ -75,6 +73,9 @@ com.solarized.firedown.IntentActivity uses a WebView component to display web co
 
 ## CVE-2024-25729
 - **Description**: Arris SBG6580 devices have predictable default WPA2 security passwords that could lead to unauthorized remote access.
+
+## CVE-2024-23729
+- **Description**: The ColorOS Internet Browser com.heytap.browser application 45.10.3.4.1 for Android allows a remote attacker to execute arbitrary JavaScript code via the com.android.browser.RealBrowserActivity component.
 
 ## CVE-2024-23727
 - **Description**: The YI Smart Kami Vision com.kamivision.yismart application through1.0.0_20231219 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to thecom.ants360.yicamera.activity.WebViewActivity component.
