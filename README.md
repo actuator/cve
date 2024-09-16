@@ -32,10 +32,24 @@ TBA
 ## CVE-2024-42041
 
 ## CVE-2024-45242
+
+## CVE-2024-46960
+
+## CVE-2024-46961
+
+## CVE-2024-46962
+
+## CVE-2024-46963
+
+## CVE-2024-46964
+
+## CVE-2024-46965
+
+## CVE-2024-46966
 ```
 
 ## CVE-2024-39345
-- **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.1.1) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address.
+- **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.0.101-202106231430) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address.
 All of the devices internet interfaces share a similar MAC address that only varies in their final octet. This allows network-adjacent attackers to derive the support user's SSH password by decrementing the final octet of the connected gateway address or via the BSSID. An attacker can then execute arbitrary OS commands with root-level privileges.
 
 ## CVE-2024-31977
@@ -49,7 +63,7 @@ com.solarized.firedown.IntentActivity uses a WebView component to display web co
 - **Description**: Multiple stored cross-site scripting (XSS) vulnerabilities on AdTran NetVanta 3120 18.01.01.00.E devices allow remote attackers to inject arbitrary JavaScript, as demonstrated by: /mainPassword.html, /processIdentity.html,/public.html, /dhcp.html, /private.html,/hostname.html, /connectivity.html, /NetworkMonitor.html, /trafficMonitoringConfig.html, & /wizardMain.html.
 
 ## CVE-2024-31970
-- **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.1.1) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
+- **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.0.101-202106231430) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
 
 ## CVE-2024-28093
 - **Description**:  The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
