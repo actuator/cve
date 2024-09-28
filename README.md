@@ -48,16 +48,16 @@ TBA [Undisclosed]
 ## CVE-2024-46966
 ```
 
+
 # CVE Categorization
 
 ## Table of Contents
 1. [Command Injection](#command-injection)
-2. [XSS & Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
+2. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 3. [Permission Bypass](#permission-bypass)
 4. [Default Credentials / Cryptographic Attacks](#default-credentials--cryptographic-attacks)
 5. [Bluetooth Attacks](#bluetooth-attacks)
 6. [Client-Side Security Bypass](#client-side-security-bypass)
-
 
 ## Command Injection
 1. **CVE-2024-31977**
@@ -174,10 +174,9 @@ TBA [Undisclosed]
 ## Bluetooth Attacks
 1. **CVE-2023-46447**
    - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
-   
 
 ## Client-Side Security Bypass
-
 1. **CVE-2023-34761**
-   - **Description**: An issue in the 7-Eleven Bluetooth Smart Cup Jailbreak allows an unauthenticated attacker to bypass the application's client-side chat censor filter by modifying the wordlist used for filtering messages. This vulnerability demonstrates the weakness of relying solely on client-side enforcement for security controls.
+   - **Description**: An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the
+application's client-side chat censor filter.
 
