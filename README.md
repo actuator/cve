@@ -1,6 +1,6 @@
 # Security Advisories (CVE)
 
-TBA
+TBA [Undisclosed]
 ```
 
 ## CVE-2024-31972
@@ -48,120 +48,136 @@ TBA
 ## CVE-2024-46966
 ```
 
-## CVE-2024-39345
-- **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.0.101-202106231430) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address.
-All of the devices internet interfaces share a similar MAC address that only varies in their final octet. This allows network-adjacent attackers to derive the support user's SSH password by decrementing the final octet of the connected gateway address or via the BSSID. An attacker can then execute arbitrary OS commands with root-level privileges.
+# CVE Categorization
 
-## CVE-2024-31977
-- **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
+## Table of Contents
+1. [Command Injection](#command-injection)
+2. [XSS & Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
+3. [Permission Bypass](#permission-bypass)
+4. [Default Credentials / Cryptographic Attacks](#default-credentials--cryptographic-attacks)
+5. [Bluetooth Attacks](#bluetooth-attacks)
+6. [Client-Side Security Bypass](#client-side-security-bypass)
 
-## CVE-2024-31974
-- **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent.
-com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
 
-## CVE-2024-31971
-- **Description**: Multiple stored cross-site scripting (XSS) vulnerabilities on AdTran NetVanta 3120 18.01.01.00.E devices allow remote attackers to inject arbitrary JavaScript, as demonstrated by: /mainPassword.html, /processIdentity.html,/public.html, /dhcp.html, /private.html,/hostname.html, /connectivity.html, /NetworkMonitor.html, /trafficMonitoringConfig.html, & /wizardMain.html.
+## Command Injection
+1. **CVE-2024-31977**
+   - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
 
-## CVE-2024-31970
-- **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.0.101-202106231430) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
+## XSS and Arbitrary JavaScript Code Execution
+1. **CVE-2024-31971**
+   - **Description**: Multiple stored cross-site scripting (XSS) vulnerabilities on AdTran NetVanta 3120 18.01.01.00.E devices allow remote attackers to inject arbitrary JavaScript, as demonstrated by: /mainPassword.html, /processIdentity.html,/public.html, /dhcp.html, /private.html,/hostname.html, /connectivity.html, /NetworkMonitor.html, /trafficMonitoringConfig.html, & /wizardMain.html.
+   
+2. **CVE-2024-28092**
+   - **Description**: UBEE DDW365 XCNDDW365 8.14.3105 software on hardware 3.13.1 allows a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via RgFirewallEL.asp, RgDdns.asp, RgTime.asp, RgDiagnostics.asp, or RgParentalBasic.asp parameters.
+   
+3. **CVE-2024-28091**
+   - **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User Defined Service in managed_services_add.asp (the victim must click an X for a deletion).
+   
+4. **CVE-2024-28090**
+   - **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User name in dyn_dns.asp.
+   
+5. **CVE-2024-28089**
+   - **Description**: Hitron CODA-4582 2AHKM-CODA4589 7.2.4.5.1b8 devices allow a remote attacker within Wi-Fi proximity (who has access to the router admin panel) to conduct a DOM-based stored XSS attack that can fetch remote resources. The payload is executed at index.html#advanced_location (aka the Device Location page). This can cause a denial of service or lead to information disclosure.
+   
+6. **CVE-2024-31974**
+   - **Description**: The com.solarized.firedown (aka Solarized FireDown Browser & Downloader) application 1.0.76 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent. com.solarized.firedown.IntentActivity uses a WebView component to display web content and doesn't adequately sanitize the URI or any extra data passed in the intent by any installed application (with no permissions).
+   
+7. **CVE-2024-23729**
+   - **Description**: The ColorOS Internet Browser com.heytap.browser application 45.10.3.4.1 for Android allows a remote attacker to execute arbitrary JavaScript code via the com.android.browser.RealBrowserActivity component.
+   
+8. **CVE-2024-23727**
+   - **Description**: The YI Smart Kami Vision com.kamivision.yismart application through1.0.0_20231219 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to the com.ants360.yicamera.activity.WebViewActivity component.
+   
+9. **CVE-2023-47883**
+   - **Description**: The com.altamirano.fabricio.tvbrowser TV browser application through 4.5.1 for Android is vulnerable to JavaScript code execution via an explicit intent due to an exposed MainActivity.
+   
+10. **CVE-2023-47882**
+    - **Description**: The Kami Vision YI IoT com.yunyi.smartcamera application through 4.1.9_20231127 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to the com.ants360.yicamera.activity.WebViewActivity component.
+    
+11. **CVE-2023-43481**
+    - **Description**: An issue in Shenzhen TCL Browser TV Web BrowseHere (aka com.tcl.browser) 6.65.022_dab24cc6_231221_gp allows a remote attacker to execute arbitrary JavaScript code via the com.tcl.browser.portal.browse.activity.BrowsePageActivity component.
+    
+12. **CVE-2023-43955**
+    - **Description**: The com.phlox.tvwebbrowser TV Bro application through 2.0.0 for Android mishandles external intents through WebView. This allows attackers to execute arbitrary code, create arbitrary files & perform arbitrary downloads via JavaScript that uses takeBlobDownloadData.
+    
+13. **CVE-2023-42471**
+    - **Description**: The wave.ai.browser application through 1.0.35 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent. It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity. This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third-party application (with no permissions).
+    
+14. **CVE-2023-42470**
+    - **Description**: The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows Remote Code Execution via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.
+    
+15. **CVE-2023-36351**
+    - **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
-## CVE-2024-28093
-- **Description**:  The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
+## Permission Bypass
+1. **CVE-2023-49003**
+   - **Description**: An issue in simplemobiletools Simple Dialer 5.18.1 allows an attacker to bypass intended access restrictions via interaction with com.simplemobiletools.dialer.activities.DialerActivity.
+   
+2. **CVE-2023-49002**
+   - **Description**: An issue in Xenom Technologies (sinous) Phone Dialer-voice Call Dialer v.1.2.5 allows an attacker to bypass intended access restrictions via interaction with com.funprime.calldialer.ui.activities.OutgoingActivity.
+   
+3. **CVE-2023-47889**
+   - **Description**: The Android application BINHDRM26 com.bdrm.superreboot 1.0.3, exposes several critical actions through its exported broadcast receivers. These exposed actions can allow any app on the device to send unauthorized broadcasts, leading to unintended consequences. The vulnerability is particularly concerning because these actions include powering off, system reboot & entering recovery mode.
+   
+4. **CVE-2023-47355**
+   - **Description**: The com.eypcnnapps.quickreboot (aka Eyuep Can Yilmaz {ROOT] Quick Reboot) application 1.0.8 for Android has exposed broadcast receivers for PowerOff, Reboot, and Recovery (e.g., com.eypcnnapps.quickreboot.widget.PowerOff) that are susceptible to unauthorized broadcasts because of missing input validation.
+   
+5. **CVE-2023-47354**
+   - **Description**: An issue in the PowerOffWidgetReceiver function of Super Reboot (Root) Recovery v1.0.3 allows attackers to arbitrarily reset or power off the device via a crafted intent.
+   
+6. **CVE-2023-47353**
+   - **Description**: An issue in the com.oneed.dvr.service.DownloadFirmwareService component of IMOU GO v1.0.11 allows attackers to force the download of arbitrary files.
+   
+7. **CVE-2023-42469**
+   - **Description**: The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.full.dialer.top.secure.encrypted.activities.DialerActivity component.
+   
+8. **CVE-2023-42468**
+   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
-## CVE-2024-28092
-- **Description**: UBEE DDW365 XCNDDW365 8.14.3105 software on hardware 3.13.1 allows a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via RgFirewallEL.asp, RgDdns.asp, RgTime.asp, RgDiagnostics.asp, or RgParentalBasic.asp parameters.
+## Default Credentials / Cryptographic Attacks
+1. **CVE-2024-39345**
+   - **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.0.101-202106231430) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address. All of the devices internet interfaces share a similar MAC address that only varies in their final octet. This allows network-adjacent attackers to derive the support user's SSH password by decrementing the final octet of the connected gateway address or via the BSSID. An attacker can then execute arbitrary OS commands with root-level privileges.
+   
+2. **CVE-2024-31970**
+   - **Description**: AdTran SRG 834-5 HDC17600021F1 devices (with SmartOS 11.1.0.101-202106231430) have SSH enabled by default, accessible both over the LAN and the Internet. During a window of time when the device is being set up, it uses a default username and password combination of admin/admin with root-level privileges. An attacker can exploit this window to gain unauthorized root access by either modifying the existing admin account or creating a new account with equivalent privileges. This vulnerability allows attackers to execute arbitrary commands.
+   
+3. **CVE-2024-28093**
+   - **Description**: The TELNET service of AdTran NetVanta 3120 18.01.01.00.E devices is enabled by default, and has default credentials for a root-level account.
+   
+4. **CVE-2024-25731**
+   - **Description**: The Elink Smart eSmartCam (com.cn.dq.ipc) application 2.1.5 for Android contains hardcoded AES encryption keys that can be extracted from a binary file. Thus, encryption can be defeated by an attacker who can observe packet data (e.g., over Wi-Fi).
+   
+5. **CVE-2024-25730**
+   - **Description**: Hitron CODA-4582 and CODA-4589 devices have default PSKs that are generated from 5-digit hex values concatenated with a "Hitron" substring, resulting in insufficient entropy (only about one million possibilities).
+   
+6. **CVE-2024-25729**
+   - **Description**: Arris SBG6580 devices have predictable default WPA2 security passwords that could lead to unauthorized remote access.
+   
+7. **CVE-2024-23726**
+   - **Description**: Ubee DDW365 XCNDDW365 devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. A PSK is generated by using the first six characters of the SSID and the last six of the BSSID, decrementing the last digit.
+   
+8. **CVE-2023-47352**
+   - **Description**: Technicolor TC8715D devices have predictable default WPA2 security passwords. An attacker who scans for SSID and BSSID values may be able to predict these passwords.
+   
+9. **CVE-2023-46919**
+   - **Description**: Phlox com.phlox.simpleserver (aka Simple HTTP Server) 1.8 and com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus have a hardcoded aKySWb2jjrr4dzkYXczKRt7K encryption key. The threat is from a man-in-the-middle attacker who can intercept and potentially modify data during transmission.
+   
+10. **CVE-2023-46918**
+    - **Description**: Phlox com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus has an Android manifest file that contains an entry with the android:allowBackup attribute set to true. This could be leveraged by an attacker with physical access to the device.
+    
+11. **CVE-2023-40039**
+    - **Description**: An issue was discovered on ARRIS TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame.
+    
+12. **CVE-2023-40038**
+    - **Description**: Arris DG860A and DG1670A devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. WIFI PSK's are generated by using the 1st 6 characters of the SSID + the last 6 of the BSSID, decrementing the last digit.
 
-## CVE-2024-28091
-- **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User Defined Service in managed_services_add.asp (the victim must click an X for a deletion)
+## Bluetooth Attacks
+1. **CVE-2023-46447**
+   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
+   
 
-## CVE-2024-28090
-- **Description**: Technicolor TC8715D TC8715D-01.EF.04.38.00-180405-S-FF9-D RSE-TC8717T devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via User name in dyn_dns.asp
-  
-## CVE-2024-28089 
-- **Description**: Hitron CODA-4582 2AHKM-CODA4589 7.2.4.5.1b8 devices allow a remote attacker within Wi-Fi proximity (who has access to the router admin panel) to conduct a DOM-based stored XSS attack that can fetch remote resources. The payload is executed at index.html#advanced_location (aka the Device Location page). This can cause a denial of service or lead to information disclosure.
+## Client-Side Security Bypass
 
-## CVE-2024-25731
-- **Description**: The Elink Smart eSmartCam (com.cn.dq.ipc) application 2.1.5 for Android contains hardcoded AES encryption keys that can be extracted from a binary file. Thus, encryption can be defeated by an attacker who can observe packet data (e.g., over Wi-Fi).
-
-## CVE-2024-25730
-- **Description**: Hitron CODA-4582 and CODA-4589 devices have default PSKs that are generated from 5-digit hex values concatenated with a "Hitron" substring, resulting in insufficient entropy (only about one million possibilities).
-
-## CVE-2024-25729
-- **Description**: Arris SBG6580 devices have predictable default WPA2 security passwords that could lead to unauthorized remote access.
-
-## CVE-2024-23729
-- **Description**: The ColorOS Internet Browser com.heytap.browser application 45.10.3.4.1 for Android allows a remote attacker to execute arbitrary JavaScript code via the com.android.browser.RealBrowserActivity component.
-
-## CVE-2024-23727
-- **Description**: The YI Smart Kami Vision com.kamivision.yismart application through1.0.0_20231219 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to thecom.ants360.yicamera.activity.WebViewActivity component.
-
-## CVE-2024-23726
-- **Description**: Ubee DDW365 XCNDDW365 devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. A PSK is generated by using the first six characters of the SSID and the last six of the BSSID, decrementing the last digit.
-
-## CVE-2023-49003
-- **Description**: An issue in simplemobiletools Simple Dialer 5.18.1 allows an attacker to bypass intended access restrictions via interaction with com.simplemobiletools.dialer.activities.DialerActivity.
-
-## CVE-2023-49002
-- **Description**: An issue in Xenom Technologies (sinous) Phone Dialer-voice Call Dialer v.1.2.5 allows an attacker to bypass intended access restrictions via interaction with com.funprime.calldialer.ui.activities.OutgoingActivity.
-
-## CVE-2023-47889
-- **Description**: The Android application BINHDRM26 com.bdrm.superreboot 1.0.3, exposes several critical actions through its exported broadcast receivers. These exposed actions can allow any app on the device to send unauthorized broadcasts, leading to unintended consequences. The vulnerability is particularly concerning because these actions include powering off, system reboot & entering recovery mode.
-
-## CVE-2023-47883
-- **Description**: The com.altamirano.fabricio.tvbrowser TV browser application through 4.5.1 for Android is vulnerable to JavaScript code execution via an explicit intent due to an exposed MainActivity.
-
-## CVE-2023-47882
-- **Description**: The Kami Vision YI IoT com.yunyi.smartcamera application through 4.1.9_20231127 for Android allows a remote attacker to execute arbitrary JavaScript code via an implicit intent to the com.ants360.yicamera.activity.WebViewActivity component.
-
-## CVE-2023-47355
-- **Description**: The com.eypcnnapps.quickreboot (aka Eyuep Can Yilmaz {ROOT] Quick Reboot) application 1.0.8 for Android has exposed broadcast receivers for PowerOff, Reboot, and Recovery (e.g., com.eypcnnapps.quickreboot.widget.PowerOff) that are susceptible to unauthorized broadcasts because of missing input validation.
-
-## CVE-2023-47354
-- **Description**: An issue in the PowerOffWidgetReceiver function of Super Reboot (Root) Recovery v1.0.3 allows attackers to arbitrarily reset or power off the device via a crafted intent
-
-## CVE-2023-47353
-- **Description**: An issue in the com.oneed.dvr.service.DownloadFirmwareService component of IMOU GO v1.0.11 allows attackers to force the download of arbitrary files.
-
-## CVE-2023-47352
-- **Description**: Technicolor TC8715D devices have predictable default WPA2 security passwords. An attacker who scans for SSID and BSSID values may be able to predict these passwords.
-
-## CVE-2023-46919
-- **Description**: Phlox com.phlox.simpleserver (aka Simple HTTP Server) 1.8 and com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus have a hardcoded aKySWb2jjrr4dzkYXczKRt7K encryption key. The threat is from a man-in-the-middle attacker who can intercept and potentially modify data during transmission.
-
-## CVE-2023-46918
-- **Description**: Phlox com.phlox.simpleserver.plus (aka Simple HTTP Server PLUS) 1.8.1-plus has an Android manifest file that contains an entry with the android:allowBackup attribute set to true. This could be leveraged by an attacker with physical access to the device.
-
-## CVE-2023-46447
-- **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
-
-## CVE-2023-43481
-- **Description**: An issue in Shenzhen TCL Browser TV Web BrowseHere (aka com.tcl.browser) 6.65.022_dab24cc6_231221_gp allows a remote attacker to execute arbitrary JavaScript code via the com.tcl.browser.portal.browse.activity.BrowsePageActivity component.
-
-## CVE-2023-43955
-- **Description**: The com.phlox.tvwebbrowser TV Bro application through 2.0.0 for Android mishandles external intents through WebView. This allows attackers to execute arbitrary code, create arbitrary files & perform arbitrary downloads via JavaScript that uses takeBlobDownloadData.
-
-## CVE-2023-42471
-- **Description**: The wave.ai.browser application through 1.0.35 for Android allows a remote attacker to execute arbitrary JavaScript code via a crafted intent. It contains a manifest entry that exports the wave.ai.browser.ui.splash.SplashScreen activity. This activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent by a third-party application (with no permissions).
-
-## CVE-2023-42470
-- **Description**: The Imou Life com.mm.android.smartlifeiot application through 6.8.0 for Android allows Remote Code Execution via a crafted intent to an exported component. This relates to the com.mm.android.easy4ip.MainActivity activity. JavaScript execution is enabled in the WebView, and direct web content loading occurs.
-
-## CVE-2023-42469
-- **Description**: The com.full.dialer.top.secure.encrypted application through 1.0.1 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.full.dialer.top.secure.encrypted.activities.DialerActivity component.
-
-## CVE-2023-42468
-- **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
-
-## CVE-2023-40039
-- **Description**: An issue was discovered on ARRIS TG852G, TG862G, and TG1672G devices. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame.
-
-## CVE-2023-40038
-- **Description**: Arris DG860A and DG1670A devices have predictable default WPA2 PSKs that could lead to unauthorized remote access. A remote attacker (in proximity to a Wi-Fi network) can derive the default WPA2-PSK value by observing a beacon frame. 
-WIFI PSK's are generated by using the 1st 6 characters of the SSID + the last 6 of the BSSID, decrementing the last digit.
-
-## CVE-2023-36351
-- **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
-
-## CVE-2023-34761
-- **Description**: An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.
+1. **CVE-2023-34761**
+   - **Description**: An issue in the 7-Eleven Bluetooth Smart Cup Jailbreak allows an unauthenticated attacker to bypass the application's client-side chat censor filter by modifying the wordlist used for filtering messages. This vulnerability demonstrates the weakness of relying solely on client-side enforcement for security controls.
 
