@@ -31,8 +31,6 @@ TBA [Undisclosed]
 
 ## CVE-2024-42041
 
-## CVE-2024-45242
-
 ## CVE-2024-46960
 
 ## CVE-2024-46961
@@ -49,7 +47,7 @@ TBA [Undisclosed]
 ```
 
 ## Table of Contents
-1. [Command Injection](#command-injection)
+1. [RCE / Command Injection](#command-injection)
 2. [Default Credentials / Cryptographic Attacks](#default-credentials--cryptographic-attacks)
 3. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 4. [Permission Bypass](#permission-bypass)
@@ -57,6 +55,10 @@ TBA [Undisclosed]
 6. [Misc](#miscellaneous)
 
 ## Command Injection
+
+- **CVE-2024-45242**
+  - **Description**: EnGenius ENH1350EXT A8J-ENH1350EXT devices before firmware version v3.9.4.1_c1.9.51, allow (blind) OS Command Injection via shell metacharacters to the Ping or Speed Test utility. During the time of initial setup, the device creates an open unsecured network whose admin panel is configured with the default credentials of admin/admin. An unauthorized attacker in proximity to the Wi-Fi network can exploit this window of time to execute arbitrary OS commands with root-level permissions.
+
 - **CVE-2024-31977**
   - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
 
