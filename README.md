@@ -15,8 +15,6 @@ TBA [Undisclosed]
 
 ## CVE-2024-36437
 
-## CVE-2024-37573
-
 ## CVE-2024-37574
 
 ## CVE-2024-37575
@@ -152,6 +150,11 @@ TBA [Undisclosed]
   - **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
 ## Permission Bypass
+
+- **CVE-2024-37573**
+  - **Description**: The Talkatone com.talkatone.android application 8.4.6 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the  
+  com.talkatone.vedroid.ui.launcher.OutgoingCallInterceptor component.
+
 - **CVE-2023-49003**
   - **Description**: An issue in simplemobiletools Simple Dialer 5.18.1 allows an attacker to bypass intended access restrictions via interaction with com.simplemobiletools.dialer.activities.DialerActivity.
   
