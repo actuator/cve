@@ -96,7 +96,7 @@ TBA [Undisclosed]
   - **Description**: The com.videodownload.browser.videodownloader (aka AppTool-Browser-Video All Video Downloader) application 20-30.05.24 for Android allows an attacker to execute arbitrary JavaScript code via the acr.browser.lightning.DefaultBrowserActivity component.
 
 - **CVE-2024-31975**
-  - **Description**: EnGenius ESR580 devices through 1.1.30 allow a remote attacker to conduct stored XSS attacks via the Wi-Fi SSID parameters. JavaScript embedded into a vulnerable field is executed when the user clicks the SSID field's corresponding EDIT button.
+  - **Description**: EnGenius EWS356-Fit devices through 1.1.30 allow a remote attacker to conduct stored XSS attacks via the Wi-Fi SSID parameters. JavaScript embedded into a vulnerable field is executed when the user clicks the SSID field's corresponding EDIT button.
 
 - **CVE-2024-31973**
   - **Description**: Hitron CODA-4582 2AHKM-CODA4589 7.2.4.5.1b8 devices allow a remote attacker within Wi-Fi proximity to conduct stored XSS attacks via the 'Network Name (SSID)' input fields to the /index.html#wireless_basic page.
