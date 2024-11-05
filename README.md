@@ -2,26 +2,17 @@
 
 TBA [Undisclosed]
 ```
-
 ## CVE-2024-31976
 
 ## CVE-2024-36061
 
 ## CVE-2024-36062
 
-## CVE-2024-36063
-
-## CVE-2024-36064
-
 ## CVE-2024-36437
 
 ## CVE-2024-37574
 
 ## CVE-2024-37575
-
-## CVE-2024-46960
-
-## CVE-2024-46961
 
 ## CVE-2024-46962
 
@@ -92,6 +83,13 @@ TBA [Undisclosed]
 
 ## XSS and Arbitrary JavaScript Code Execution
 
+- **CVE-2024-46961**
+  - **Description**: The Inshot com.downloader.privatebrowser (aka Video Downloader - XDownloader) application through 1.3.5 for Android allows an attacker to execute arbitrary JavaScript code via the com.downloader.privatebrowser.activity.PrivateMainActivity component.
+
+- **CVE-2024-46960**
+  - **Description**: The ASD com.rocks.video.downloader (aka HD Video Downloader All Format) application through 7.0.129 for Android allows an attacker to execute arbitrary JavaScript code via the com.rocks.video.downloader.MainBrowserActivity component.
+
+
 - **CVE-2024-42041**
   - **Description**: The com.videodownload.browser.videodownloader (aka AppTool-Browser-Video All Video Downloader) application 20-30.05.24 for Android allows an attacker to execute arbitrary JavaScript code via the acr.browser.lightning.DefaultBrowserActivity component.
 
@@ -155,6 +153,16 @@ TBA [Undisclosed]
   - **Description**: The Talkatone com.talkatone.android application 8.4.6 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the  
   com.talkatone.vedroid.ui.launcher.OutgoingCallInterceptor component.
 
+- **CVE-2024-36064**
+  - **Description**: The NLL com.nll.cb (aka ACR Phone) application through 0.330-playStore-NoAccessibility-arm8 for Android allows any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.nll.cb.dialer.dialer.DialerActivity component.
+
+- **CVE-2024-36063**
+  - **Description**: The Goodwy com.goodwy.dialer (aka Right Dialer) application through 5.1.0 for Android enables any application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.goodwy.dialer.activities.DialerActivity component.
+
+- **CVE-2024-36062** 
+  - **Description**: > The com.callassistant.android (aka AI Call Assistant & Screener) application 1.174 for Android enables any installed application (with no permissions) to place phone calls without user interaction bysending a crafted intent via thecom.callassistant.android.ui.call.incall.InCallActivity component.
+
+    
 - **CVE-2023-49003**
   - **Description**: An issue in simplemobiletools Simple Dialer 5.18.1 allows an attacker to bypass intended access restrictions via interaction with com.simplemobiletools.dialer.activities.DialerActivity.
   
