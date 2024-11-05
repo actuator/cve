@@ -158,7 +158,7 @@ TBA [Undisclosed]
   - **Description**: The Goodwy com.goodwy.dialer (aka Right Dialer) application through 5.1.0 for Android enables any application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.goodwy.dialer.activities.DialerActivity component.
 
 - **CVE-2024-36062** 
-  - **Description**: > The com.callassistant.android (aka AI Call Assistant & Screener) application 1.174 for Android enables any installed application (with no permissions) to place phone calls without user interaction bysending a crafted intent via thecom.callassistant.android.ui.call.incall.InCallActivity component.
+  - **Description**: The com.callassistant.android (aka AI Call Assistant & Screener) application 1.174 for Android enables any installed application (with no permissions) to place phone calls without user interaction bysending a crafted intent via thecom.callassistant.android.ui.call.incall.InCallActivity component.
 
     
 - **CVE-2023-49003**
