@@ -4,8 +4,6 @@ TBA [Undisclosed]
 ```
 ## CVE-2024-31976
 
-## CVE-2024-36061
-
 ## CVE-2024-36437
 
 ## CVE-2024-37574
@@ -35,7 +33,10 @@ TBA [Undisclosed]
 
 - **CVE-2024-45242**
   - **Description**: EnGenius ENH1350EXT A8J-ENH1350EXT devices before firmware version v3.9.4.1_c1.9.51, allow (blind) OS Command Injection via shell metacharacters to the Ping or Speed Test utility. During the time of initial setup, the device creates an open unsecured network whose admin panel is configured with the default credentials of admin/admin. An unauthorized attacker in proximity to the Wi-Fi network can exploit this window of time to execute arbitrary OS commands with root-level permissions.
- 
+
+- **CVE-2024-36061**
+  - **Description**: EnGenius EWS356-FIT devices through 1.1.30 allow (blind) OS command injection. This allows an attacker to execute arbitrary OS commands via shell metacharacters to the Ping and Speed Test utilities.
+
 - **CVE-2024-36060**
   - **Description**: EnGenius EnStation5-AC A8J-ENS500AC 1.0.0 devices allow (blind) OS command injection via shell metacharacters in the Ping and Speed Test parameters.
 
