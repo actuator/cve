@@ -2,10 +2,7 @@
 
 TBA [Undisclosed]
 ```
-## CVE-2024-31976
-
 ## CVE-2024-36437
-
 ## CVE-2024-37574
 ## CVE-2024-37575
 
@@ -48,6 +45,9 @@ TBA [Undisclosed]
 
 - **CVE-2024-31977**
   - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
+
+- **CVE-2024-31976**
+  - **Description**: EnGenius EWS356-FIT 1.1.30 and earlier devices allow a remote attacker to execute arbitrary OS commands via the Controller connectivity parameter.
 
 ## Default Credentials / Cryptographic Attacks
 - **CVE-2024-39345**
