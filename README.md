@@ -12,11 +12,6 @@ TBA [Undisclosed]
 ## CVE-2024-53934
 ## CVE-2024-53935
 ## CVE-2024-53936
-## CVE-2024-53937
-## CVE-2024-53938
-## CVE-2024-53939
-## CVE-2024-53940
-## CVE-2024-53941
 ## CVE-2024-53942
 ## CVE-2024-53943
 ## CVE-2024-53944
@@ -34,6 +29,12 @@ TBA [Undisclosed]
 
 ## Command Injection
 
+- **CVE-2024-53940**
+  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. Multiple endpoints are vulnerable to command injection, including `/cgi-bin/luci/admin/opsw/ddns_apply`, `/cgi-bin/luci/admin/opsw/set_forward_cfg`, `/cgi-bin/luci/admin/opsw/ping_tracert_apply`, and `/cgi-bin/luci/admin/opsw/set_pptp_l2tp_data_cfg`. Attackers can exploit these vulnerabilities by sending crafted payloads through parameters intended for these utilities, enabling arbitrary command execution with root-level permissions on the device.
+
+- **CVE-2024-53939**
+  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. The /cgi-bin/luci/admin/opsw/Dual_freq_un_apple endpoint is vulnerable to command injection through the 2.4 GHz and 5 GHz name parameters, allowing an attacker to execute arbitrary commands on the device (with root-level permissions) via crafted input.
+
 - **CVE-2024-45242**
   - **Description**: EnGenius ENH1350EXT A8J-ENH1350EXT devices before firmware version v3.9.4.1_c1.9.51, allow (blind) OS Command Injection via shell metacharacters to the Ping or Speed Test utility. During the time of initial setup, the device creates an open unsecured network whose admin panel is configured with the default credentials of admin/admin. An unauthorized attacker in proximity to the Wi-Fi network can exploit this window of time to execute arbitrary OS commands with root-level permissions.
 
@@ -43,13 +44,25 @@ TBA [Undisclosed]
 - **CVE-2024-36060**
   - **Description**: EnGenius EnStation5-AC A8J-ENS500AC 1.0.0 devices allow (blind) OS command injection via shell metacharacters in the Ping and Speed Test parameters.
 
-- **CVE-2024-31977**
-  - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
-
 - **CVE-2024-31976**
   - **Description**: EnGenius EWS356-FIT 1.1.30 and earlier devices allow a remote attacker to execute arbitrary OS commands via the Controller connectivity parameter.
 
+- **CVE-2024-31977**
+  - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
+
 ## Default Credentials / Cryptographic Attacks
+
+- **CVE-2024-53941**
+  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. 
+A remote attacker (in proximity to a Wi-Fi network) can derive the default Wi-Fi PSK value via the last 4 octets of the BSSID.
+
+- **CVE-2024-53938**
+  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. The TELNET service is enabled by default and exposed over the LAN. The root account is accessible without a password, allowing attackers to achieve full control over the router remotely without any authentication.
+
+- **CVE-2024-53937**
+  - **Description**: An issue was discovered on Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. The TELNET service is enabled by default with admin/admin as default credentials and is exposed over the LAN. The allows attackers to execute arbitrary commands with root-level permissions. Device setup does not require
+this password to be changed during setup in order to utilize the device. (However, the TELNET password is dictated by the current GUI password.)
+
 - **CVE-2024-39345**
   - **Description**: AdTran 834-5 HDC17600021F1 (SmartOS 11.1.0.101-202106231430) devices enable the SSH service by default and have a hidden, undocumented, hard-coded support account whose password is based on the devices MAC address. All of the devices internet interfaces share a similar MAC address that only varies in their final octet. This allows network-adjacent attackers to derive the support user's SSH password by decrementing the final octet of the connected gateway address or via the BSSID. An attacker can then execute arbitrary OS commands with root-level privileges.
   
