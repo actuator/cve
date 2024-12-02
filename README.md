@@ -30,7 +30,7 @@ TBA [Undisclosed]
 ## Command Injection
 
 - **CVE-2024-53940**
-  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. Multiple endpoints are vulnerable to command injection, including `/cgi-bin/luci/admin/opsw/ddns_apply`, `/cgi-bin/luci/admin/opsw/set_forward_cfg`, `/cgi-bin/luci/admin/opsw/ping_tracert_apply`, and `/cgi-bin/luci/admin/opsw/set_pptp_l2tp_data_cfg`. Attackers can exploit these vulnerabilities by sending crafted payloads through parameters intended for these utilities, enabling arbitrary command execution with root-level permissions on the device.
+  - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. Certain /cgi-bin/luci/admin endpoints are vulnerable to command injection. Attackers can exploit this by sending crafted payloads through parameters intended for the ping utility, enabling arbitrary command execution with root-level permissions on the device.
 
 - **CVE-2024-53939**
   - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. The /cgi-bin/luci/admin/opsw/Dual_freq_un_apple endpoint is vulnerable to command injection through the 2.4 GHz and 5 GHz name parameters, allowing an attacker to execute arbitrary commands on the device (with root-level permissions) via crafted input.
