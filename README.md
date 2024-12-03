@@ -3,8 +3,6 @@
 TBA [Undisclosed]
 ```
 ## CVE-2024-36437
-## CVE-2024-37574
-## CVE-2024-37575
 
 ## CVE-2024-53931
 ## CVE-2024-53932
@@ -181,6 +179,12 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
 ## Permission Bypass
+
+- **CVE-2024-37575**
+  - **Description**: The Mister org.mistergroup.shouldianswer application 1.4.264 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the org.mistergroup.shouldianswer.ui.default_dialer.DefaultDialerActivity component.
+    
+- **CVE-2024-37574**
+  - **Description**: The GriceMobile com.grice.call application 4.5.2 for Android enables any installed application (with no permissions) to place phone call  without user interaction by sending a crafted intent via the com.iui.mobile.presentation.MobileActivity.
 
 - **CVE-2024-37573**
   - **Description**: The Talkatone com.talkatone.android application 8.4.6 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the  
