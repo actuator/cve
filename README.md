@@ -2,7 +2,6 @@
 
 TBA [Undisclosed]
 ```
-## CVE-2024-36437
 ## CVE-2024-53942
 ## CVE-2024-53943
 ## CVE-2024-53944
@@ -120,6 +119,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2024-37573**
   - **Description**: The Talkatone com.talkatone.android application 8.4.6 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the  
   com.talkatone.vedroid.ui.launcher.OutgoingCallInterceptor component.
+
+- **CVE-2024-36437**
+  - **Description**: The com.enflick.android.TextNow (aka TextNow: Call + Text Unlimited) application 24.17.0.2 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.enflick.android.TextNow.activities.DialerActivity component.
 
 - **CVE-2024-36064**
   - **Description**: The NLL com.nll.cb (aka ACR Phone) application through 0.330-playStore-NoAccessibility-arm8 for Android allows any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.nll.cb.dialer.dialer.DialerActivity component.
