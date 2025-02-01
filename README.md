@@ -2,8 +2,6 @@
 
 TBA [Undisclosed]
 ```
-## CVE-2024-53942
-## CVE-2024-53943
 ## CVE-2024-53944
 ## CVE-2024-53945
 ## CVE-2024-53946
@@ -18,6 +16,9 @@ TBA [Undisclosed]
 6. [Misc](#miscellaneous)
 
 ## Command Injection
+
+- **CVE-2024-53942**
+  - **Description**:  An issue was discovered on NRadio N8-180 NROS-1.9.2.n3.c5 devices. The /cgi-bin/luci/nradio/basic/radio endpoint is vulnerable to command injection via the 2.4 GHz and 5 GHz name parameters, allowing a remote attacker to execute arbitrary OS commands on the device (with root-level permissions) via crafted input.
 
 - **CVE-2024-53940**
   - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. Certain /cgi-bin/luci/admin endpoints are vulnerable to command injection. Attackers can exploit this by sending crafted payloads through parameters intended for the ping utility, enabling arbitrary command execution with root-level permissions on the device.
@@ -158,6 +159,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## XSS and Arbitrary JavaScript Code Execution
+
+- **CVE-2024-53943**
+  - **Description**: An issue was discovered in NRadio N8-180 NROS-1.9.2.n3.c5 devices. The /cgi-bin/luci/nradio/basic/radio endpoint is vulnerable to XSS via the 2.4 GHz and 5 GHz name parameters, allowing an attacker to execute JavaScript within the context of the current user by injecting JavaScript into the SSID field. If an administrator logs into the device, the injected script runs in their browser, executing the malicious payload.
 
 - **CVE-2024-46966**
   - **Description**: The Ikhgur mn.ikhgur.khotoch (aka Video Downloader Pro & Browser) application through 1.0.42 for Android allows an attacker to execute arbitrary JavaScript code via the mn.ikhgur.khotoch.MainActivity component.
