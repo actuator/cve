@@ -19,7 +19,7 @@ TBA [Undisclosed]
 - **CVE-2024-53944**
   - **Description**: An issue was discovered on Tuoshi/Dionlink LT15D 4G Wi-Fi devices through M7628NNxlSPv2xUI_v1.0.1802.10.08_P4 and LT21B devices through M7628xUSAxUIv2_v1.0.1481.15.02_P0.
 A unauthenticated remote attacker with network access can exploit a command injection vulnerability. The /goform/formJsonAjaxReq endpoint fails to sanitize shell metacharacters sent via JSON parameters, thus allowing attackers to execute arbitrary OS commands with root privileges.
-  - 
+
 - **CVE-2024-53942**
   - **Description**:  An issue was discovered on NRadio N8-180 NROS-1.9.2.n3.c5 devices. The /cgi-bin/luci/nradio/basic/radio endpoint is vulnerable to command injection via the 2.4 GHz and 5 GHz name parameters, allowing a remote attacker to execute arbitrary OS commands on the device (with root-level permissions) via crafted input.
 
