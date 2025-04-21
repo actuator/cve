@@ -4,7 +4,25 @@ TBA [Undisclosed]
 ```
 ## CVE-2024-53945
 ## CVE-2024-53946
+
+## CVE-2025-43976  
+## CVE-2025-43977  
+## CVE-2025-43978  
+## CVE-2025-43979  
+## CVE-2025-43980  
+
+## CVE-2025-43982  
+## CVE-2025-43983  
+## CVE-2025-43984  
+## CVE-2025-43985  
+## CVE-2025-43986  
+ 
+## CVE-2025-43988  
+## CVE-2025-43989  
 ```
+
+
+
 
 ## Table of Contents
 1. [RCE / Command Injection](#command-injection)
