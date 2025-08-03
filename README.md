@@ -4,10 +4,6 @@ TBA [Undisclosed]
 ```
 ## CVE-2024-53945
 ## CVE-2024-53946
- 
-## CVE-2025-43978  
-## CVE-2025-43979  
-## CVE-2025-43980
 
 ## CVE-2025-43982  
 ## CVE-2025-43983  
@@ -31,6 +27,11 @@ TBA [Undisclosed]
 6. [Misc](#miscellaneous)
 
 ## Command Injection
+- **CVE-2025-43979**
+  - **Description**: An issue was discovered on FIRSTNUM JC21A-04 devices through 2.01ME/FN that allows authenticated attackers to execute arbitrary OS system commands with root privileges via crafted payloads to the xml_action.cgi?method= endpoint.
+
+- **CVE-2025-43978**
+  - **Description**: Jointelli 5G CPE 21H01 firmware JY_21H01_A3_v1.36 devices allow (blind) OS command injection. Multiple endpoints are vulnerable, including /ubus/?flag=set_WPS_pin and /ubus/?flag=netAppStar1 and /ubus/?flag=set_wifi_cfgs. This allows an authenticated attacker to execute arbitrary OS commands with root privileges via crafted inputs to the SSID, WPS, Traceroute, and Ping fields.
 
 - **CVE-2024-53944**
   - **Description**: An issue was discovered on Tuoshi/Dionlink LT15D 4G Wi-Fi devices through M7628NNxlSPv2xUI_v1.0.1802.10.08_P4 and LT21B devices through M7628xUSAxUIv2_v1.0.1481.15.02_P0.
@@ -61,7 +62,9 @@ A unauthenticated remote attacker with network access can exploit a command inje
   - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
 
 ## Default Credentials / Cryptographic Attacks
-
+- **CVE-2025-43980**
+  - **Description**: An issue was discovered on FIRSTNUM JC21A-04 devices through 2.01ME/FN. They enable the SSH service by default with the credentialsn of root/admin. The GUI doesn't offer a way to disable the account.
+ 
 - **CVE-2024-53941**
   - **Description**: An issue was discovered in Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. 
 A remote attacker (in proximity to a Wi-Fi network) can derive the default Wi-Fi PSK value via the last 4 octets of the BSSID.
