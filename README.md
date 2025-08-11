@@ -15,9 +15,6 @@
   - **Description**:  The /goform/formJsonAjaxReq POST endpoint of Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices mishandles the set_timesetting action with the ntpserver0 parameter, which is used in a system command.
 By setting a username=admin cookie (bypassing normal session checks), an unauthenticated attacker can use that parameter to execute arbitrary OS commands.
 
-- **CVE-2025-43985**
-  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They contain a critical vulnerability in /goform/goform_get_cmd_process and /goform/goform_set_cmd_process that allows remote unauthenticated attackers to view sensitive information such as admin credentials.
-
 - **CVE-2025-43984**
   - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They are vulnerable to unauthenticated /goform/goform_set_cmd_process requests. A crafted POST request, using the SSID parameter, allows remote attackers to execute arbitrary OS commands with root privileges.
 
@@ -279,12 +276,17 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
 ## Bluetooth Attacks
+
 - **CVE-2023-46447**
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
 
 ## Information Disclosure
+    
 - **CVE-2025-43988**
   - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
+
+- **CVE-2025-43985**
+  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They contain a critical vulnerability in /goform/goform_get_cmd_process and /goform/goform_set_cmd_process that allows remote unauthenticated attackers to view sensitive information such as admin credentials.
 
 ## Miscellaneous
 - **CVE-2023-34761**
