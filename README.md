@@ -1,37 +1,37 @@
 # Security Advisories (CVE)
 
-TBA [Undisclosed]
-```
-## CVE-2024-53945
-## CVE-2024-53946
-
-## CVE-2025-43982  
-## CVE-2025-43983  
-## CVE-2025-43984  
-## CVE-2025-43985  
-## CVE-2025-43986  
- 
-## CVE-2025-43988  
-## CVE-2025-43989  
-```
-
-
-
-
 ## Table of Contents
-1. [RCE / Command Injection](#command-injection)
+1. [RCE / Command Injection](#remote-code-execution)
 2. [Default Credentials / Cryptographic Attacks](#default-credentials--cryptographic-attacks)
 3. [Privilege Escalation](#privilege-escalation)
 4. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 5. [Bluetooth Attacks](#bluetooth-attacks)
-6. [Misc](#miscellaneous)
+6. [Information Disclosure](#information-disclosure)
+7. [Misc](#miscellaneous)
 
-## Command Injection
+## Remote Code Execution
+
+- **CVE-2025-43989**
+  - **Description**:  The /goform/formJsonAjaxReq POST endpoint of Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices mishandles the set_timesetting action with the ntpserver0 parameter, which is used in a system command.
+By setting a username=admin cookie (bypassing normal session checks), an unauthenticated attacker can use that parameter to execute arbitrary OS commands.
+
+- **CVE-2025-43985**
+  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They contain a critical vulnerability in /goform/goform_get_cmd_process and /goform/goform_set_cmd_process that allows remote unauthenticated attackers to view sensitive information such as admin credentials.
+
+- **CVE-2025-43984**
+  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They are vulnerable to unauthenticated /goform/goform_set_cmd_process requests. A crafted POST request, using the SSID parameter, allows remote attackers to execute arbitrary OS commands with root privileges.
+
+- **CVE-2025-43983**
+  - **Description**: KuWFi CPF908-CP5 WEB5.0_LCD_20210125 devices have multiple unauthenticated access control vulnerabilities within goform/goform_set_cmd_process and goform/goform_get_cmd_process. These allow an unauthenticated attacker to retrieve sensitive information (including the device admin username and password), modify critical device settings, and send arbitrary SMS messages.
+
 - **CVE-2025-43979**
   - **Description**: An issue was discovered on FIRSTNUM JC21A-04 devices through 2.01ME/FN that allows authenticated attackers to execute arbitrary OS system commands with root privileges via crafted payloads to the xml_action.cgi?method= endpoint.
 
 - **CVE-2025-43978**
   - **Description**: Jointelli 5G CPE 21H01 firmware JY_21H01_A3_v1.36 devices allow (blind) OS command injection. Multiple endpoints are vulnerable, including /ubus/?flag=set_WPS_pin and /ubus/?flag=netAppStar1 and /ubus/?flag=set_wifi_cfgs. This allows an authenticated attacker to execute arbitrary OS commands with root privileges via crafted inputs to the SSID, WPS, Traceroute, and Ping fields.
+
+- **CVE-2024-53945**
+  - **Description**: The KuWFi 4G AC900 LTE router 1.0.13 is vulnerable to command injection on the HTTP API endpoints /goform/formMultiApnSetting and /goform/atCmd. An authenticated attacker can execute arbitrary OS commands with root privileges via shell metacharacters in parameters such as pincode and cmds. Exploitation can lead to full system compromise, including enabling remote access (e.g., enabling telnet).
 
 - **CVE-2024-53944**
   - **Description**: An issue was discovered on Tuoshi/Dionlink LT15D 4G Wi-Fi devices through M7628NNxlSPv2xUI_v1.0.1802.10.08_P4 and LT21B devices through M7628xUSAxUIv2_v1.0.1481.15.02_P0.
@@ -62,6 +62,13 @@ A unauthenticated remote attacker with network access can exploit a command inje
   - **Description**: Adtran 834-5 11.1.0.101-202106231430 devices allow OS Command Injection via shell metacharacters to the Ping or Traceroute utility.
 
 ## Default Credentials / Cryptographic Attacks
+
+- **CVE-2025-43986**
+  - **Description**: An issue was discovered on KuWFi GC111 GC111-GL-LM321_V3.0_20191211 devices. The TELNET service is enabled by default and exposed over the WAN interface without authentication.
+
+- **CVE-2025-43982**
+  - **Description**: Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices enable the SSH service by default. There is a hidden hard-coded root account that cannot be disabled in the GUI.
+
 - **CVE-2025-43980**
   - **Description**: An issue was discovered on FIRSTNUM JC21A-04 devices through 2.01ME/FN. They enable the SSH service by default with the credentialsn of root/admin. The GUI doesn't offer a way to disable the account.
  
@@ -275,9 +282,14 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2023-46447**
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
 
+## Information Disclosure
+- **CVE-2025-43988**
+  - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
+
 ## Miscellaneous
 - **CVE-2023-34761**
   - **Description**: An unauthenticated attacker within BLE proximity can remotely connect to a 7-Eleven LED Message Cup, Hello Cup 1.3.1 for Android, and bypass the application's client-side chat censor filter.
- 
 
-```
+- **CVE-2024-53946**
+  - **Description**: The KuWFi 4G LTE AC900 router 1.0.13 is vulnerable to Cross-Site Request Forgery (CSRF) on its web management interface. This vulnerability allows an attacker to trick an authenticated admin user into performing unauthorized actions, such as exploiting a command injection vulnerability in /goform/formMultiApnSetting. Successful exploitation can also lead to unauthorized configuration changes.
+
