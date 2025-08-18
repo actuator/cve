@@ -4,22 +4,19 @@
 1. [RCE / Command Injection](#remote-code-execution)
 2. [Default Credentials / Cryptographic Attacks](#default-credentials--cryptographic-attacks)
 3. [Privilege Escalation](#privilege-escalation)
-4. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
-5. [Bluetooth Attacks](#bluetooth-attacks)
+4. [Broken Access Control](#broken-access-control)
+5. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 6. [Information Disclosure](#information-disclosure)
 7. [Misc](#miscellaneous)
 
 ## Remote Code Execution
 
 - **CVE-2025-43989**
-  - **Description**:  The /goform/formJsonAjaxReq POST endpoint of Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices mishandles the set_timesetting action with the ntpserver0 parameter, which is used in a system command.
+  - **Description**: The /goform/formJsonAjaxReq POST endpoint of Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices mishandles the set_timesetting action with the ntpserver0 parameter, which is used in a system command.
 By setting a username=admin cookie (bypassing normal session checks), an unauthenticated attacker can use that parameter to execute arbitrary OS commands.
 
 - **CVE-2025-43984**
   - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They are vulnerable to unauthenticated /goform/goform_set_cmd_process requests. A crafted POST request, using the SSID parameter, allows remote attackers to execute arbitrary OS commands with root privileges.
-
-- **CVE-2025-43983**
-  - **Description**: KuWFi CPF908-CP5 WEB5.0_LCD_20210125 devices have multiple unauthenticated access control vulnerabilities within goform/goform_set_cmd_process and goform/goform_get_cmd_process. These allow an unauthenticated attacker to retrieve sensitive information (including the device admin username and password), modify critical device settings, and send arbitrary SMS messages.
 
 - **CVE-2025-43979**
   - **Description**: An issue was discovered on FIRSTNUM JC21A-04 devices through 2.01ME/FN that allows authenticated attackers to execute arbitrary OS system commands with root privileges via crafted payloads to the xml_action.cgi?method= endpoint.
@@ -191,6 +188,17 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2023-42468**
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
+## Broken Access Control
+
+- **CVE-2025-43988**
+  - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
+
+- **CVE-2025-43985**
+  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They contain a critical vulnerability in /goform/goform_get_cmd_process and /goform/goform_set_cmd_process that allows remote unauthenticated attackers to view sensitive information such as admin credentials.
+
+- **CVE-2025-43983**
+  - **Description**: KuWFi CPF908-CP5 WEB5.0_LCD_20210125 devices have multiple unauthenticated access control vulnerabilities within goform/goform_set_cmd_process and goform/goform_get_cmd_process. These allow an unauthenticated attacker to retrieve sensitive information (including the device admin username and password), modify critical device settings, and send arbitrary SMS messages.
+
 ## XSS and Arbitrary JavaScript Code Execution
 
 - **CVE-2024-53943**
@@ -275,18 +283,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2023-36351**
   - **Description**: An issue in Viatom Health ViHealth for Android v.2.74.58 and before allows a remote attacker to execute arbitrary code via the com.viatom.baselib.mvvm.webWebViewActivity component.
 
-## Bluetooth Attacks
+## Information Disclosure
 
 - **CVE-2023-46447**
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
-
-## Information Disclosure
-    
-- **CVE-2025-43988**
-  - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
-
-- **CVE-2025-43985**
-  - **Description**: An issue was discovered on KuWFi GC111 devices (Hardware Version: CPE-LM321_V3.2, Software Version: GC111-GL-LM321_V3.0_20191211). They contain a critical vulnerability in /goform/goform_get_cmd_process and /goform/goform_set_cmd_process that allows remote unauthenticated attackers to view sensitive information such as admin credentials.
 
 ## Miscellaneous
 - **CVE-2023-34761**
