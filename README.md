@@ -117,11 +117,11 @@ this password to be changed during setup in order to utilize the device. (Howeve
 ## Privilege Escalation
 
 - **CVE-2025-43977**
-  - **Description**: The com.enflick.android.tn2ndLine application through 24.17.1.0 for Android enables any installed application (with no permissions) to
- place phone calls without user interaction by sending a crafted intent via the com.enflick.android.TextNow.activities.DialerActivity component.
+  - **Description**: The com.skt.prod.dialer application through 12.5.0 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.skt.prod.dialer.activities.outgoingcall.OutgoingCallInternalBroadcaster component.
 
 - **CVE-2025-43976**
-  - **Description**: The com.skt.prod.dialer application through 12.5.0 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.skt.prod.dialer.activities.outgoingcall.OutgoingCallInternalBroadcaster component.
+  - **Description**: The com.enflick.android.tn2ndLine application through 24.17.1.0 for Android enables any installed application (with no permissions) to
+ place phone calls without user interaction by sending a crafted intent via the com.enflick.android.TextNow.activities.DialerActivity component.
 
 - **CVE-2024-53936**
   - **Description**: The com.asianmobile.callcolor (aka Color Phone Call Screen App) application through 24 for Android enables any application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.asianmobile.callcolor.ui.component.call.CallActivity component.
