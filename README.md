@@ -9,8 +9,21 @@
 6. [Information Disclosure](#information-disclosure)
 7. [Misc](#miscellaneous)
 
+
+
+|                |                |                |                |**Not Disclosed** |
+|----------------|----------------|----------------|----------------|----------------|
+| CVE-2025-68706 | CVE-2025-68707 | CVE-2025-68708 | CVE-2025-68709 | CVE-2025-68710 |
+| CVE-2025-68711 | CVE-2025-68712 | CVE-2025-68713 | CVE-2025-68714 | CVE-2025-68715 |
+| CVE-2025-68716 | CVE-2025-68717 | CVE-2025-68718 | CVE-2025-68719 | CVE-2025-68720 |
+
+
+
 ## Remote Code Execution
 
+- **CVE-2025-68706**
+  - **Description**: A stack-based buffer overflow exists in the GoAhead-Webs HTTP daemon on KuWFi 4G LTE AC900 devices with firmware 1.0.13. The /goform/formMultiApnSetting handler uses sprintf() to copy the  user-supplied pincode parameter into a fixed 132-byte stack buffer with no bounds checks. This allows an attacker to corrupt adjacent stack memory, crash the web server, and (under certain conditions) may enable arbitrary code execution.
+    
 - **CVE-2025-43989**
   - **Description**: The /goform/formJsonAjaxReq POST endpoint of Shenzhen Tuoshi NR500-EA RG500UEAABxCOMSLICv3.4.2731.16.43 devices mishandles the set_timesetting action with the ntpserver0 parameter, which is used in a system command.
 By setting a username=admin cookie (bypassing normal session checks), an unauthenticated attacker can use that parameter to execute arbitrary OS commands.
