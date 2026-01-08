@@ -14,8 +14,8 @@
 |                |                |                |                |                |
 |----------------|----------------|----------------|----------------|----------------|
 | **Not Disclosed:** | CVE-2025-68707 | CVE-2025-68708 | CVE-2025-68709 | CVE-2025-68710 |
-| CVE-2025-68711 | CVE-2025-68712 | CVE-2025-68713 | CVE-2025-68714 | CVE-2025-68715 |
-| CVE-2025-68720 |   |   |   |  |
+| CVE-2025-68711 | CVE-2025-68712 | CVE-2025-68713 | CVE-2025-68720 |  |
+|  |   |   |   |  |
 
 
 
@@ -75,6 +75,9 @@ A unauthenticated remote attacker with network access can exploit a command inje
     
 - **CVE-2025-68716**
   - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 enable the SSH service enabled by default on the LAN interface. The root account is configured with no password, and administrators cannot disable SSH or enforce authentication via the CLI or web GUI. This allows any LAN-adjacent attacker to trivially gain root shell access and execute arbitrary commands with full privileges.
+
+- **CVE-2025-68714**
+  - **Description**: An issue was discovered in Panda Wireless PWRU0 devices with firmware 2.2.9 that enables TELNET by default and exposes it over the WAN interface with default credentials (admin/admin), granting remote attackers the ability to run  arbitrary commands OS commands.
 
 - **CVE-2025-43986**
   - **Description**: An issue was discovered on KuWFi GC111 GC111-GL-LM321_V3.0_20191211 devices. The TELNET service is enabled by default and exposed over the WAN interface without authentication.
@@ -214,6 +217,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
     
 - **CVE-2025-68717**
   - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 allow authentication bypass during session validation. If any user is logged in, endpoints such as /cgi-bin/system-tool accept unauthenticated requests with empty or invalid session values. This design flaw lets attackers piggyback on another user's active session to retrieve sensitive configuration data or execute privileged actions without authentication.
+
+- **CVE-2025-68715**
+  - **Description**: An issue was discovered in Panda Wireless PWRU0 devices with firmware 2.2.9 that exposes multiple HTTP endpoints (/goform/setWan, /goform/setLan, /goform/wirelessBasic) that do not enforce authentication. A remote unauthenticated attacker can modify WAN, LAN, and wireless settings directly, leading to privilege escalation and denial of service.
 
 - **CVE-2025-43988**
   - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
