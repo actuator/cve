@@ -70,6 +70,12 @@ A unauthenticated remote attacker with network access can exploit a command inje
 
 ## Default Credentials / Cryptographic Attacks
 
+- **CVE-2025-68718**
+  - **Description**:  KAYSUS KS-WR1200 routers with firmware 107 expose SSH and TELNET services on the LAN interface with hardcoded root credentials (root:12345678). The administrator cannot disable these services or change the hardcoded password. (Changing the management GUI password does not affect SSH/TELNET authentication.) Any LAN-adjacent attacker can trivially log in with root privileges.
+    
+- **CVE-2025-68716**
+  - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 enable the SSH service enabled by default on the LAN interface. The root account is configured with no password, and administrators cannot disable SSH or enforce authentication via the CLI or web GUI. This allows any LAN-adjacent attacker to trivially gain root shell access and execute arbitrary commands with full privileges.
+
 - **CVE-2025-43986**
   - **Description**: An issue was discovered on KuWFi GC111 GC111-GL-LM321_V3.0_20191211 devices. The TELNET service is enabled by default and exposed over the WAN interface without authentication.
 
@@ -202,6 +208,12 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
+
+- **CVE-2025-68719**
+  - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 mishandle configuration management. Once any user is logged in and maintains an active session, an attacker can directly query the backup endpoint and download a full configuration archive. This archive contains sensitive files such as /etc/shadow, enabling credential recovery and potential full compromise of the device.
+    
+- **CVE-2025-68717**
+  - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 allow authentication bypass during session validation. If any user is logged in, endpoints such as /cgi-bin/system-tool accept unauthenticated requests with empty or invalid session values. This design flaw lets attackers piggyback on another user's active session to retrieve sensitive configuration data or execute privileged actions without authentication.
 
 - **CVE-2025-43988**
   - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
