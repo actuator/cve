@@ -13,7 +13,7 @@
 
 |                |                |                |                |                |
 |----------------|----------------|----------------|----------------|----------------|
-| **Not Disclosed:** | CVE-2025-68707 | CVE-2025-68708 | CVE-2025-68709 | CVE-2025-68710 |
+| **Not Disclosed:** |  | CVE-2025-68708 | CVE-2025-68709 | CVE-2025-68710 |
 | CVE-2025-68711 | CVE-2025-68712 | CVE-2025-68713 | CVE-2025-68720 |  |
 |  |   |   |   |  |
 
@@ -220,6 +220,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 - **CVE-2025-68715**
   - **Description**: An issue was discovered in Panda Wireless PWRU0 devices with firmware 2.2.9 that exposes multiple HTTP endpoints (/goform/setWan, /goform/setLan, /goform/wirelessBasic) that do not enforce authentication. A remote unauthenticated attacker can modify WAN, LAN, and wireless settings directly, leading to privilege escalation and denial of service.
+
+- **CVE-2025-68707**
+  - **Description**:An authentication bypass vulnerability in the Tongyu AX1800 Wi-Fi 6 Router with firmware 1.0.0 allows unauthenticated network-adjacent attackers to perform arbitrary configuration changes without providing credentials, as long as a valid admin session is active. This can result in full compromise of the device (i.e., via unauthenticated access to /boaform/formSaveConfig and /boaform/admin endpoints).
 
 - **CVE-2025-43988**
   - **Description**: KuWFi 5G01-X55 FL2020_V0.0.12 devices expose an unauthenticated API endpoint (ajax_get.cgi), allowing remote attackers to retrieve sensitive configuration data, including admin credentials.
