@@ -13,8 +13,7 @@
 
 |                |                |                |                |                |
 |----------------|----------------|----------------|----------------|----------------|
-| **Not Disclosed:** |  | CVE-2025-68708 | CVE-2025-68709 | CVE-2025-68710 |
-| CVE-2025-68711 | CVE-2025-68712 | CVE-2025-68713 | CVE-2025-68720 | **CVE-2026-41474** |
+| **Not Disclosed:** |   CVE-2025-68713 | CVE-2025-68720 | **CVE-2026-41474** |
 |  |   |   |   |  |
 
 
@@ -220,6 +219,22 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 - **CVE-2025-68715**
   - **Description**: An issue was discovered in Panda Wireless PWRU0 devices with firmware 2.2.9 that exposes multiple HTTP endpoints (/goform/setWan, /goform/setLan, /goform/wirelessBasic) that do not enforce authentication. A remote unauthenticated attacker can modify WAN, LAN, and wireless settings directly, leading to privilege escalation and denial of service.
+
+- **CVE-2025-68712**
+  - **Description**: SpSoft AppLock (com.sp.protector.free) 7.9.40 for Android allows a local attacker with physical access to bypass fingerprint or PIN authentication. Although the app integrates Android's biometric mechanisms, the lock is implemented with a custom overlay that fails to consistently enforce authentication. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents - an attacker can exit the lock interface without re-authentication and access protected apps (e.g., Chrome). This results in information disclosure and privilege escalation.
+    
+- **CVE-2025-68711**
+  - **Description**: AppLockZ App Lock and Fingerprint Lock (applock.passwordfingerprint.applockz) 4.2.11 for Android allows a local attacker with physical access to bypass the PIN lock. The lock is implemented as an overlay rather than by using Android's secure authentication APIs. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents, an attacker can evade lockscreen verification and access protected apps (e.g., Chrome). This results in information disclosure and privilege escalation.
+    
+- **CVE-2025-68710**
+  - **Description**: Easyelife App lock (aka Fingerprint,Applock or locker.app.safe.applocker) 1.9.2 for Android allows a local attacker with physical access to bypass the PIN lock. The lock is implemented as an overlay rather than by using Android's secure authentication APIs. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents - an attacker can evade lockscreen verification and access protected apps (e.g., Chrome), resulting in information disclosure and privilege escalation.
+    
+- **CVE-2025-68709**
+  - **Description**: SailingLab AppLock (aka com.alpha.applock) 4.3.8 for Android allows a local attacker to trigger arbitrary JavaScript execution via BrowserMainActivity, which accepts VIEW intents with javascript: URIs. This unsafe navigation path results in script execution and may allow UI spoofing or privilege escalation.
+    
+- **CVE-2025-68708**
+  - **Description**: SailingLab AppLock (aka com.alpha.applock) 4.3.8 for Android allows a local attacker with physical access to bypass the PIN lock. The lock is implemented as an overlay rather than by using Android's secure authentication APIs. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents - an attacker can evade lockscreen verification and access protected apps (e.g., Chrome). This results in information disclosure and privilege escalation.
+
 
 - **CVE-2025-68707**
   - **Description**:An authentication bypass vulnerability in the Tongyu AX1800 Wi-Fi 6 Router with firmware 1.0.0 allows unauthenticated network-adjacent attackers to perform arbitrary configuration changes without providing credentials, as long as a valid admin session is active. This can result in full compromise of the device (i.e., via unauthenticated access to /boaform/formSaveConfig and /boaform/admin endpoints).
