@@ -211,6 +211,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 ## Broken Access Control
 
+- **CVE-2026-11411**
+  - **Description**: A security flaw has been discovered in iAI Lab PDF AI App 4.21.0 on Android. Impacted is the function getExternalCacheDir of the component chatpdf.pro. Performing a manipulation of the argument _display_name results in path traversal. 
+    
 - **CVE-2025-68719**
   - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 mishandle configuration management. Once any user is logged in and maintains an active session, an attacker can directly query the backup endpoint and download a full configuration archive. This archive contains sensitive files such as /etc/shadow, enabling credential recovery and potential full compromise of the device.
     
