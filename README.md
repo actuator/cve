@@ -210,6 +210,8 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
+- **CVE-2026-12190**
+  - **Description**: A vulnerability was found in Genspark AI Workspace App 2.8.4 on Android and classified as problematic. The manipulation results in improper authorization in handler for custom url scheme. Performing a manipulation of the argument _display_name results in path traversal. 
 
 - **CVE-2026-11411**
   - **Description**: A security flaw has been discovered in iAI Lab PDF AI App 4.21.0 on Android. Impacted is the function getExternalCacheDir of the component chatpdf.pro. Performing a manipulation of the argument _display_name results in path traversal. 
