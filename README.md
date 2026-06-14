@@ -225,6 +225,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2025-68715**
   - **Description**: An issue was discovered in Panda Wireless PWRU0 devices with firmware 2.2.9 that exposes multiple HTTP endpoints (/goform/setWan, /goform/setLan, /goform/wirelessBasic) that do not enforce authentication. A remote unauthenticated attacker can modify WAN, LAN, and wireless settings directly, leading to privilege escalation and denial of service.
 
+- **CVE-2025-68713**
+  - **Description**: An issue was discovered in Rakuten Send Anywhere (File Transfer) for Android (com.estmob.android.sendanywhere) 23.2.9. The vulnerability allows untrusted applications (with no permissions) to force arbitrary file downloads into the app's scoped storage. The resulting files appear in the application's trusted Received interface. These conditions
+  - establish a vector for arbitrary code execution if the payload is an APK file, or a denial-of-service condition through resource exhaustion from oversized transfers.
+
 - **CVE-2025-68712**
   - **Description**: SpSoft AppLock (com.sp.protector.free) 7.9.40 for Android allows a local attacker with physical access to bypass fingerprint or PIN authentication. Although the app integrates Android's biometric mechanisms, the lock is implemented with a custom overlay that fails to consistently enforce authentication. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents - an attacker can exit the lock interface without re-authentication and access protected apps (e.g., Chrome). This results in information disclosure and privilege escalation.
     
