@@ -12,7 +12,7 @@
 
 
 ```
-TBA: | CVE-2025-68713 | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-58128 | CVE-2026-58456 | CVE-2026-58460
+TBA: | CVE-2025-68713 | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-58128 | CVE-2026-58456 | 
 ```
 
 
@@ -208,6 +208,11 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
+
+- **CVE-2026-58460**
+  - **Description**: react-native-receive-sharing-intent contains a path traversal vulnerability that allows a co-resident malicious application to write files outside the intended cache directory by supplying a crafted _display_name value containing dot-dot path components through a malicious ContentProvider. Attackers can fire an explicit ACTION_SEND intent at the consuming app's exported share-receiver activity to overwrite arbitrary files in the consuming app's private data directory, including databases, shared preferences, and cached configuration, with attacker-controlled content.
+
+
 - **CVE-2026-12190**
   - **Description**: A vulnerability was found in Genspark AI Workspace App 2.8.4 on Android and classified as problematic. The manipulation results in improper authorization in handler for custom url scheme. Performing a manipulation of the argument _display_name results in path traversal. 
 
