@@ -135,6 +135,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 ## Privilege Escalation
 
+- **CVE-2026-18604**
+  - **Description**: A vulnerability, which was classified as problematic, was found in textPlus Text Message and Call App up to 8.3.5 on Android. This affects the function DialerActivity of the component com.gogii.textplus. The manipulation with an unknown input leads to a improper export of android application components vulnerability.
+
 - **CVE-2025-43977**
   - **Description**: The com.skt.prod.dialer application through 12.5.0 for Android enables any installed application (with no permissions) to place phone calls without user interaction by sending a crafted intent via the com.skt.prod.dialer.activities.outgoingcall.OutgoingCallInternalBroadcaster component.
 
@@ -209,9 +212,11 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 ## Broken Access Control
 
+- **CVE-2026-18648**
+  - **Description**: A vulnerability was found in Blix Email Blue Mail Calendar App 2.2.305. It has been rated as critical. The affected element is the function FileDirectory.getDataColumn/FileDirectory.getFileFromUri of the component react-native-receive-sharing-intent. This manipulation of the argument _display_name causes path traversal. 
+  
 - **CVE-2026-58460**
   - **Description**: react-native-receive-sharing-intent contains a path traversal vulnerability that allows a co-resident malicious application to write files outside the intended cache directory by supplying a crafted _display_name value containing dot-dot path components through a malicious ContentProvider. Attackers can fire an explicit ACTION_SEND intent at the consuming app's exported share-receiver activity to overwrite arbitrary files in the consuming app's private data directory, including databases, shared preferences, and cached configuration, with attacker-controlled content.
-
 
 - **CVE-2026-12190**
   - **Description**: A vulnerability was found in Genspark AI Workspace App 2.8.4 on Android and classified as problematic. The manipulation results in improper authorization in handler for custom url scheme. Performing a manipulation of the argument _display_name results in path traversal. 
