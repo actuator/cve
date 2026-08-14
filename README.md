@@ -18,6 +18,9 @@ TBA: | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-57849 | CVE-2026-58128 | CVE-2
 
 ## Remote Code Execution
 
+- **CVE-2026-19771**
+  - **Description**: An authenticated OS command injection vulnerability exists in the Baicells EG3661M 5G devices (also marketed as EG3661M-NR6 / PhotonID63M) running firmware BaiCE_BQ6_2.0.5.3_NA. The flaw is in the network diagnostic endpoints diagnosis_route and diagnosis_ping of the LuCI web management interface, reachable at /cgi-bin/luci/;stok=<session>/admin/system/. The handlers build traceroute and ping command lines from request parameters and pass them to a shell without input validation or neutralization of shell metacharacters. Injecting a pipe character into an affected parameter terminates the intended command and executes attacker-supplied commands. Commands execute with the privileges of the web server, which runs as root, leading to full device compromise. 
+
 - **CVE-2025-68706**
   - **Description**: A stack-based buffer overflow exists in the GoAhead-Webs HTTP daemon on KuWFi 4G LTE AC900 devices with firmware 1.0.13. The /goform/formMultiApnSetting handler uses sprintf() to copy the  user-supplied pincode parameter into a fixed 132-byte stack buffer with no bounds checks. This allows an attacker to corrupt adjacent stack memory, crash the web server, and (under certain conditions) may enable arbitrary code execution.
     
