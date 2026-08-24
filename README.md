@@ -214,6 +214,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
+- **CVE-2026-78196**
+  - **Description**: A vulnerability has been found in achorein expo-share-intent up to 8.0.0 and classified as problematic. Affected by this vulnerability is the function getDataColumn of the file ExpoShareIntentModule.kt of the component Android File Copy Routine. The manipulation of the argument _display_name with an unknown input leads to a path traversal vulnerability. 
+    
 - **CVE-2026-18853**
   - **Description**: A security vulnerability has been detected in ZomboDroid Meme Generator App 4.6830 on Android. This issue affects the function t5.l.c of the component com.zombodroid.MemeGenerator. Such manipulation leads to path traversal.
     
