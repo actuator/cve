@@ -214,6 +214,13 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
+
+- **CVE-2026-84442**
+  - **Description**: 	MapQuest for Android (package com.mapquest.android.ace, version 10.16.1) is affected by a path traversal ("Dirty Stream", CWE-22 / CWE-23) reachable through its exported activity com.mapquest.android.ace.MainActivity. Any installed application, holding no Android permissions, can send an ACTION_SEND intent (type "text/html") carrying an EXTRA_STREAM content:// Uri to the exported activity and reach the copy. Overwriting the AsyncStorage database (databases/RKStorage, table catalystLocalStorage) yields arbitrary control over the app's stored state, including session and authentication values, causing persistent forced-logout / denial of service and possible auth-state manipulation. 
+    
+- **CVE-2026-84431**
+  - **Description**: A vulnerability has been found in AirAsia MOVE App up to 12.47.1 on Android and classified as problematic. Affected by this issue is the function getRealPath of the class com.airasia.core.utils.RealPathUtil within the component Intent Handler (ACTION_SEND share intake). The manipulation of the argument _display_name (the copy destination filename, reported by the sending content provider) leads to path traversal. 
+
 - **CVE-2026-78196**
   - **Description**: A vulnerability has been found in achorein expo-share-intent up to 8.0.0 and classified as problematic. Affected by this vulnerability is the function getDataColumn of the file ExpoShareIntentModule.kt of the component Android File Copy Routine. The manipulation of the argument _display_name with an unknown input leads to a path traversal vulnerability. 
     
