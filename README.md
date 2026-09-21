@@ -7,7 +7,7 @@
 4. [Broken Access Control](#broken-access-control)
 5. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 6. [Information Disclosure](#information-disclosure)
-7. [Path and Directory Traversal Attacks](#path-and-directory-traversal-attacks)
+7. [Path Traversal Attacks](#path-traversal-attacks)
 8. [Misc](#miscellaneous)
 
 
@@ -343,7 +343,7 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2023-46447**
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
 
-## Path and Directory Traversal Attacks
+## Path Traversal Attacks
 
 - **CVE-2026-89038**
   - **Description**: Verizon Cloud for Android (com.vcast.mediamanager) before 26.7.10 contains a path traversal vulnerability that allows co-resident malicious applications to write attacker-controlled bytes outside the intended staging directory by supplying a crafted _display_name value containing path-traversal sequences through exported activities OneTouchUploadActivity and PrintShopCloudActivity. Attackers can exploit the unsanitized filename concatenation in the file-staging sink via ACTION_SEND or ACTION_SEND_MULTIPLE intents to achieve arbitrary file write and inject attacker-controlled content into the authenticated user's Verizon Cloud account without user interaction.
