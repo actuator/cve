@@ -138,6 +138,9 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 ## Privilege Escalation
 
+- **CVE-2026-94540**
+  - **Description**: DesktopSMS 1.11.0 by MrPear contains an unauthorized access vulnerability that allows local attackers to transmit SMS, retrieve SMS-derived content, and persist an attacker-selected paired identity by interacting with the application's local service without any pairing confirmation or user interaction. Attackers can exploit the unauthenticated local service through same-device loopback to perform privileged SMS operations using the victim application's permissions.
+
 - **CVE-2026-18604**
   - **Description**: A vulnerability, which was classified as problematic, was found in textPlus Text Message and Call App up to 8.3.5 on Android. This affects the function DialerActivity of the component com.gogii.textplus. The manipulation with an unknown input leads to a improper export of android application components vulnerability.
 
