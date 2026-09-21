@@ -7,14 +7,14 @@
 4. [Broken Access Control](#broken-access-control)
 5. [XSS and Arbitrary JavaScript Code Execution](#xss-and-arbitrary-javascript-code-execution)
 6. [Information Disclosure](#information-disclosure)
-7. [Misc](#miscellaneous)
+7. [Path/Directory Traversal](#path-traversal)
+8. [Misc](#miscellaneous)
 
 
 
 ```
 TBA: | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-57849 | CVE-2026-58128 | CVE-2026-58456 |  CVE-2026-60117
 ```
-
 
 ## Remote Code Execution
 
@@ -214,37 +214,7 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
-
-- **CVE-2026-89038**
-  - **Description**: Verizon Cloud for Android (com.vcast.mediamanager) before 26.7.10 contains a path traversal vulnerability that allows co-resident malicious applications to write attacker-controlled bytes outside the intended staging directory by supplying a crafted _display_name value containing path-traversal sequences through exported activities OneTouchUploadActivity and PrintShopCloudActivity. Attackers can exploit the unsanitized filename concatenation in the file-staging sink via ACTION_SEND or ACTION_SEND_MULTIPLE intents to achieve arbitrary file write and inject attacker-controlled content into the authenticated user's Verizon Cloud account without user interaction.
-
-- **CVE-2026-84852**
-  - **Description**: A security vulnerability has been detected in Reader Tools PDF Reader App 98.8 on Android. The affected element is the function ActSplashNew.handleDeeplink of the component File Handler. The manipulation of the argument _display_name leads to path traversal.
-
-- **CVE-2026-84442**
-  - **Description**: MapQuest for Android (package com.mapquest.android.ace, version 10.16.1) is affected by a path traversal ("Dirty Stream", CWE-22 / CWE-23) reachable through its exported activity com.mapquest.android.ace.MainActivity. Any installed application, holding no Android permissions, can send an ACTION_SEND intent (type "text/html") carrying an EXTRA_STREAM content:// Uri to the exported activity and reach the copy. Overwriting the AsyncStorage database (databases/RKStorage, table catalystLocalStorage) yields arbitrary control over the app's stored state, including session and authentication values, causing persistent forced-logout / denial of service and possible auth-state manipulation. 
-    
-- **CVE-2026-84431**
-  - **Description**: A vulnerability was detected in AirAsia MOVE App up to 12.47.1 on Android. This issue affects the function com.airasia.core.utils.RealPathUtil.getRealPath of the component com.airasia.mobile. Performing a manipulation of the argument _display_name results in path traversal
-
-- **CVE-2026-78196**
-  - **Description**: A vulnerability has been found in achorein expo-share-intent up to 8.0.0 and classified as problematic. Affected by this vulnerability is the function getDataColumn of the file ExpoShareIntentModule.kt of the component Android File Copy Routine. The manipulation of the argument _display_name with an unknown input leads to a path traversal vulnerability. 
-    
-- **CVE-2026-18853**
-  - **Description**: A security vulnerability has been detected in ZomboDroid Meme Generator App 4.6830 on Android. This issue affects the function t5.l.c of the component com.zombodroid.MemeGenerator. Such manipulation leads to path traversal.
-    
-- **CVE-2026-18648**
-  - **Description**: A vulnerability was found in Blix Email Blue Mail Calendar App 2.2.305. It has been rated as critical. The affected element is the function FileDirectory.getDataColumn/FileDirectory.getFileFromUri of the component react-native-receive-sharing-intent. This manipulation of the argument _display_name causes path traversal. 
-  
-- **CVE-2026-58460**
-  - **Description**: react-native-receive-sharing-intent contains a path traversal vulnerability that allows a co-resident malicious application to write files outside the intended cache directory by supplying a crafted _display_name value containing dot-dot path components through a malicious ContentProvider. Attackers can fire an explicit ACTION_SEND intent at the consuming app's exported share-receiver activity to overwrite arbitrary files in the consuming app's private data directory, including databases, shared preferences, and cached configuration, with attacker-controlled content.
-
-- **CVE-2026-12190**
-  - **Description**: A vulnerability was found in Genspark AI Workspace App 2.8.4 on Android and classified as problematic. The manipulation results in improper authorization in handler for custom url scheme. Performing a manipulation of the argument _display_name results in path traversal. 
-
-- **CVE-2026-11411**
-  - **Description**: A security flaw has been discovered in iAI Lab PDF AI App 4.21.0 on Android. Impacted is the function getExternalCacheDir of the component chatpdf.pro. Performing a manipulation of the argument _display_name results in path traversal. 
-    
+   
 - **CVE-2025-68719**
   - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 mishandle configuration management. Once any user is logged in and maintains an active session, an attacker can directly query the backup endpoint and download a full configuration archive. This archive contains sensitive files such as /etc/shadow, enabling credential recovery and potential full compromise of the device.
     
@@ -272,7 +242,6 @@ this password to be changed during setup in order to utilize the device. (Howeve
     
 - **CVE-2025-68708**
   - **Description**: SailingLab AppLock (aka com.alpha.applock) 4.3.8 for Android allows a local attacker with physical access to bypass the PIN lock. The lock is implemented as an overlay rather than by using Android's secure authentication APIs. By navigating cascading interface flows - insecure navigation through exposed routes facilitates app control evasion {I.N.T.E.R.F.A.C.E] via advertisement or browser intents - an attacker can evade lockscreen verification and access protected apps (e.g., Chrome). This results in information disclosure and privilege escalation.
-
 
 - **CVE-2025-68707**
   - **Description**:An authentication bypass vulnerability in the Tongyu AX1800 Wi-Fi 6 Router with firmware 1.0.0 allows unauthenticated network-adjacent attackers to perform arbitrary configuration changes without providing credentials, as long as a valid admin session is active. This can result in full compromise of the device (i.e., via unauthenticated access to /boaform/formSaveConfig and /boaform/admin endpoints).
@@ -311,7 +280,6 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 - **CVE-2024-46960**
   - **Description**: The ASD com.rocks.video.downloader (aka HD Video Downloader All Format) application through 7.0.129 for Android allows an attacker to execute arbitrary JavaScript code via the com.rocks.video.downloader.MainBrowserActivity component.
-
 
 - **CVE-2024-42041**
   - **Description**: The com.videodownload.browser.videodownloader (aka AppTool-Browser-Video All Video Downloader) application 20-30.05.24 for Android allows an attacker to execute arbitrary JavaScript code via the acr.browser.lightning.DefaultBrowserActivity component.
@@ -374,6 +342,38 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 - **CVE-2023-46447**
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
+
+## Path / Directory Traversal
+
+- **CVE-2026-89038**
+  - **Description**: Verizon Cloud for Android (com.vcast.mediamanager) before 26.7.10 contains a path traversal vulnerability that allows co-resident malicious applications to write attacker-controlled bytes outside the intended staging directory by supplying a crafted _display_name value containing path-traversal sequences through exported activities OneTouchUploadActivity and PrintShopCloudActivity. Attackers can exploit the unsanitized filename concatenation in the file-staging sink via ACTION_SEND or ACTION_SEND_MULTIPLE intents to achieve arbitrary file write and inject attacker-controlled content into the authenticated user's Verizon Cloud account without user interaction.
+
+- **CVE-2026-84852**
+  - **Description**: A security vulnerability has been detected in Reader Tools PDF Reader App 98.8 on Android. The affected element is the function ActSplashNew.handleDeeplink of the component File Handler. The manipulation of the argument _display_name leads to path traversal.
+
+- **CVE-2026-84442**
+  - **Description**: MapQuest for Android (package com.mapquest.android.ace, version 10.16.1) is affected by a path traversal ("Dirty Stream", CWE-22 / CWE-23) reachable through its exported activity com.mapquest.android.ace.MainActivity. Any installed application, holding no Android permissions, can send an ACTION_SEND intent (type "text/html") carrying an EXTRA_STREAM content:// Uri to the exported activity and reach the copy. Overwriting the AsyncStorage database (databases/RKStorage, table catalystLocalStorage) yields arbitrary control over the app's stored state, including session and authentication values, causing persistent forced-logout / denial of service and possible auth-state manipulation. 
+    
+- **CVE-2026-84431**
+  - **Description**: A vulnerability was detected in AirAsia MOVE App up to 12.47.1 on Android. This issue affects the function com.airasia.core.utils.RealPathUtil.getRealPath of the component com.airasia.mobile. Performing a manipulation of the argument _display_name results in path traversal
+
+- **CVE-2026-78196**
+  - **Description**: A vulnerability has been found in achorein expo-share-intent up to 8.0.0 and classified as problematic. Affected by this vulnerability is the function getDataColumn of the file ExpoShareIntentModule.kt of the component Android File Copy Routine. The manipulation of the argument _display_name with an unknown input leads to a path traversal vulnerability. 
+    
+- **CVE-2026-18853**
+  - **Description**: A security vulnerability has been detected in ZomboDroid Meme Generator App 4.6830 on Android. This issue affects the function t5.l.c of the component com.zombodroid.MemeGenerator. Such manipulation leads to path traversal.
+    
+- **CVE-2026-18648**
+  - **Description**: A vulnerability was found in Blix Email Blue Mail Calendar App 2.2.305. It has been rated as critical. The affected element is the function FileDirectory.getDataColumn/FileDirectory.getFileFromUri of the component react-native-receive-sharing-intent. This manipulation of the argument _display_name causes path traversal. 
+  
+- **CVE-2026-58460**
+  - **Description**: react-native-receive-sharing-intent contains a path traversal vulnerability that allows a co-resident malicious application to write files outside the intended cache directory by supplying a crafted _display_name value containing dot-dot path components through a malicious ContentProvider. Attackers can fire an explicit ACTION_SEND intent at the consuming app's exported share-receiver activity to overwrite arbitrary files in the consuming app's private data directory, including databases, shared preferences, and cached configuration, with attacker-controlled content.
+
+- **CVE-2026-12190**
+  - **Description**: A vulnerability was found in Genspark AI Workspace App 2.8.4 on Android and classified as problematic. The manipulation results in improper authorization in handler for custom url scheme. Performing a manipulation of the argument _display_name results in path traversal. 
+
+- **CVE-2026-11411**
+  - **Description**: A security flaw has been discovered in iAI Lab PDF AI App 4.21.0 on Android. Impacted is the function getExternalCacheDir of the component chatpdf.pro. Performing a manipulation of the argument _display_name results in path traversal. 
 
 ## Miscellaneous
 - **CVE-2023-34761**
