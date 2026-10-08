@@ -348,7 +348,7 @@ this password to be changed during setup in order to utilize the device. (Howeve
 
 ## Path Traversal Attacks
 
-- **CVE-CVE-2026-101886**
+- **CVE-2026-101886**
   - **Description**: Cisco Jabber for Android (com.cisco.im) before 15.3.1.311364 contains a path traversal vulnerability that allows a malicious app with no permissions to write attacker-controlled files into Jabber's private data directory by exploiting the exported crosslaunch.share activity and an unsanitized display name from a ContentProvider used in file path construction. Attackers can craft a shared content:// URI with a display name containing '../' sequences to place fully attacker-controlled content within directories such as databases/, shared_prefs/, no_backup/, and files/ without user interaction.
 
 - **CVE-2026-89038**
