@@ -347,6 +347,8 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The POPS! Rebel application 5.0 for Android, in POPS! Rebel Bluetooth Glucose Monitoring System, sends unencrypted glucose measurements over BLE.
 
 ## Path Traversal Attacks
+- **CVE-2026-113576**
+  - **Description**: Adobe Digital Editions is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.
 
 - **CVE-2026-101886**
   - **Description**: Cisco Jabber for Android (com.cisco.im) before 15.3.1.311364 contains a path traversal vulnerability that allows a malicious app with no permissions to write attacker-controlled files into Jabber's private data directory by exploiting the exported crosslaunch.share activity and an unsanitized display name from a ContentProvider used in file path construction. Attackers can craft a shared content:// URI with a display name containing '../' sequences to place fully attacker-controlled content within directories such as databases/, shared_prefs/, no_backup/, and files/ without user interaction.
