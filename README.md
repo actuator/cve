@@ -13,7 +13,7 @@
 
 
 ```
-TBA: | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-57849 | CVE-2026-58128 | CVE-2026-58456 |  CVE-2026-60117 | CVE-2026-108897 |CVE-2026-109106
+TBA: | CVE-2025-68720 | CVE-2026-41474 | CVE-2026-58456 |  CVE-2026-60117 | CVE-2026-108897 |CVE-2026-109106
 ```
 
 ## Remote Code Execution
@@ -351,7 +351,6 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2026-127209**
   - **Description**: Xiaomi Mi Browser Android Application (com.mi.globalbrowser) before 14.66.0-gn contains a path traversal vulnerability in the exported ThirdDocViewerActivity component, where CopyExternalFile.copyFromUri() copies content provider streams using an unsanitized filename from the _display_name column without basename reduction or canonical-path checks. A zero-permission co-resident malicious application can supply a crafted content provider with a _display_name containing .. sequences to make the browser write attacker-controlled bytes to an arbitrary path within its external storage directory, escaping the intended cache_docs staging location without requiring user interaction.
 
-
 - **CVE-2026-113576**
   - **Description**: Adobe Digital Editions is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.
 
@@ -369,6 +368,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
     
 - **CVE-2026-84431**
   - **Description**: A vulnerability was detected in AirAsia MOVE App up to 12.47.1 on Android. This issue affects the function com.airasia.core.utils.RealPathUtil.getRealPath of the component com.airasia.mobile. Performing a manipulation of the argument _display_name results in path traversal
+
+- **CVE-2026-58128**
+  - **Description**: Alan: Health Insurance for Android (com.alanmobile) 1.450.0 contains a path traversal vulnerability that allows a co-resident malicious application to write attacker-controlled files outside the intended directory via the exported ShareReceiverActivity, which uses an unsanitized _display_name value from a shared content URI to construct the destination file path. Attackers can send a crafted ACTION_SEND intent with a _display_name containing directory traversal sequences to overwrite sensitive files within the app's sandbox such as databases, shared_prefs, and WebView data, enabling state tampering or code execution in the app's context without authentication or user interaction.
+
 
 - **CVE-2026-78196**
   - **Description**: A vulnerability has been found in achorein expo-share-intent up to 8.0.0 and classified as problematic. Affected by this vulnerability is the function getDataColumn of the file ExpoShareIntentModule.kt of the component Android File Copy Routine. The manipulation of the argument _display_name with an unknown input leads to a path traversal vulnerability. 
