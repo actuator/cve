@@ -357,6 +357,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2026-113576**
   - **Description**: Adobe Digital Editions is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.
 
+- **CVE-2026-109106**
+  - **Description**: A security flaw has been discovered in Polaris Office App 9.9.19 on Android. Affected by this vulnerability is the function com.infraware.service.m.n.a of the component Document Intake. The manipulation of the argument _display_name results in path traversal. The attack is only possible with local access. The exploit has been released to the public and may be used for attacks. Upgrading to version 9.9.22 addresses this issue. 
+ 
+
 - **CVE-2026-101886**
   - **Description**: Cisco Jabber for Android (com.cisco.im) before 15.3.1.311364 contains a path traversal vulnerability that allows a malicious app with no permissions to write attacker-controlled files into Jabber's private data directory by exploiting the exported crosslaunch.share activity and an unsanitized display name from a ContentProvider used in file path construction. Attackers can craft a shared content:// URI with a display name containing '../' sequences to place fully attacker-controlled content within directories such as databases/, shared_prefs/, no_backup/, and files/ without user interaction.
 
@@ -372,6 +376,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
 - **CVE-2026-84431**
   - **Description**: A vulnerability was detected in AirAsia MOVE App up to 12.47.1 on Android. This issue affects the function com.airasia.core.utils.RealPathUtil.getRealPath of the component com.airasia.mobile. Performing a manipulation of the argument _display_name results in path traversal
 
+- **CVE-2026-60117**
+  - **Description**: The Android implementation of the Flutter/Dart receive_sharing_intent package, versions 1.4.1 through 1.9.0, contains a path traversal vulnerability in FileDirectory.getDataColumn that allows a malicious co-resident application to write files outside the intended cache directory by supplying a crafted _display_name value from an untrusted ContentProvider. Attackers can use a path-shaped display name ../databases/proof.txt combined with a controlled content stream to write to arbitrary locations within the receiving application's private sandbox under its UID, achieving file overwrite without user interaction.
+ 
+  
 - **CVE-2026-58128**
   - **Description**: Alan: Health Insurance for Android (com.alanmobile) 1.450.0 contains a path traversal vulnerability that allows a co-resident malicious application to write attacker-controlled files outside the intended directory via the exported ShareReceiverActivity, which uses an unsanitized _display_name value from a shared content URI to construct the destination file path. Attackers can send a crafted ACTION_SEND intent with a _display_name containing directory traversal sequences to overwrite sensitive files within the app's sandbox such as databases, shared_prefs, and WebView data, enabling state tampering or code execution in the app's context without authentication or user interaction.
 
