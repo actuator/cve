@@ -217,7 +217,10 @@ this password to be changed during setup in order to utilize the device. (Howeve
   - **Description**: The com.cutestudio.colordialer application through 2.1.8-2 for Android allows a remote attacker to initiate phone calls without user consent, because of improper export of the com.cutestudio.dialer.activities.DialerActivity component. A third-party application (without any permissions) can craft an intent targeting com.cutestudio.dialer.activities.DialerActivity via the android.intent.action.CALL action in conjunction with a tel: URI, thereby placing a phone call.
 
 ## Broken Access Control
-   
+
+- **CVE-2025-108897**
+  - **Description**: A security vulnerability has been detected in Smart Media4U Technology SHAREit App 6.27.38_ww on Android. The impacted element is the function syncInvoke of the component WebView JS Bridge. SHAREit WebView JavaScript Bridge Allows Attacker-Controlled Pages to Leak Tokens and Execute Intents in Application Context
+    
 - **CVE-2025-68719**
   - **Description**: KAYSUS KS-WR3600 routers with firmware 1.0.5.9.1 mishandle configuration management. Once any user is logged in and maintains an active session, an attacker can directly query the backup endpoint and download a full configuration archive. This archive contains sensitive files such as /etc/shadow, enabling credential recovery and potential full compromise of the device.
     
